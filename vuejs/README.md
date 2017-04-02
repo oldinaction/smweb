@@ -17,7 +17,7 @@
 
 ## 示例
 
-- [A-01-HelloWorld]((https://oldinaction.github.io/smweb/vuejs/A-01-HelloWorld/))
+- [A-01-HelloWorld](https://oldinaction.github.io/smweb/vuejs/A-01-HelloWorld/)
 
 ## Demo (点击链接查看效果)
 
