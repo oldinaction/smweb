@@ -1,0 +1,20 @@
+{
+  "name": "jquery-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+	"dev": "webpack-dev-server --devtool eval-source-map --progress --colors --hot --inline --content-base ./dist",
+    "build": "webpack --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.3.3"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

@@ -10,7 +10,7 @@ module.exports = {
     },
     // 插件项，需要new一个这个插件的实例
     plugins: [
-        // 运行webpack后，可看到此项目的bundle.js相比A-01-HelloWorld中的bundle.js会在顶部多出下面的这行注释
+        // 给编译后的文件添加作者信息。运行webpack后，可看到此项目的bundle.js相比A-01-HelloWorld中的bundle.js会在顶部多出下面的这行注释
         new webpack.BannerPlugin('This file is created by smalle')
     ],
     module: {

@@ -69,13 +69,6 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
-
-document.write('<br/>hi, module!')
-
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -101,12 +94,19 @@ if(false) {
 }
 
 /***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+document.write('<br/>hi, others!')
+
+
+/***/ }),
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1) // 载入 style.css
+__webpack_require__(0) // 载入 style.css
 document.write('Hello World!')
-__webpack_require__(0)
+__webpack_require__(1)
 
 
 /***/ }),
