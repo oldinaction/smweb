@@ -17,8 +17,8 @@
 
 ## 示例
 
-- [A-01-HelloWorld](https://oldinaction.github.io/smweb/vuejs/A-01-HelloWorld/)
+- [A01-helloworld](https://oldinaction.github.io/smweb/vuejs/A01-helloworld/)
 
 ## Demo (点击链接查看效果)
 
-- [D-01-GithubCommit](https://oldinaction.github.io/smweb/vuejs/D-01-GithubCommit/)
+- [D01-github-commit](https://oldinaction.github.io/smweb/vuejs/D01-github-commit/)
