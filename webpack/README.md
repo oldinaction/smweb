@@ -4,7 +4,7 @@
 
 - Webpack 是当下最热门的前端资源模块化管理和打包工具
 - [官方Doc](https://webpack.js.org/guides/get-started/)
-- [webpack中文指南](http://webpackdoc.com/index.html)
+- [egghead.io视频教程](https://egghead.io/courses/using-webpack-for-production-javascript-applications)
 
 ## 笔记
 
@@ -16,7 +16,7 @@
 
 ## 示例
 
-- A01-helloworld
+- A01-helloworld [webpack中文指南](http://webpackdoc.com/index.html)
     - 进入项目目录 (确定已经有 package.json，没有就通过 `npm init` 根据提示创建)
     - `npm install webpack --save-dev` 安装 webpack 依赖。`--save-dev`表示自动更新package.json的运行时依赖中
     - 创建一个静态页面 index.html 和一个 JS 入口文件 entry.js

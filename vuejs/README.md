@@ -3,6 +3,9 @@
 ## 介绍
 
 - [官方Doc (v2.0)](http://cn.vuejs.org/v2/guide/)
+- 工具介绍
+    - `vue-cli` vue脚手架：可通过npm安装，主要用于快速构建项目基本框架
+    - `vue-devtools` vue调试工具，可在chrome商店下载安装此浏览器插件
 
 ## 笔记
 
@@ -18,6 +21,22 @@
 ## 示例
 
 - [A01-helloworld](https://oldinaction.github.io/smweb/vuejs/A01-helloworld/)
+    - 无需安装任何依赖，只需要将vue.js引入到html文件中即可
+
+## 进阶
+
+- B02-vuecli-webpack 使用vue-cli工具，初始化一个基于webpack模板的项目
+
+    ```shell
+    # 全局安装 vue-cli (vue脚手架：可初始化一个基本vue项目)
+    $ npm install --global vue-cli
+    # 在当前目录创建一个基于 webpack 模板的项目
+    $ vue init webpack-simple
+    # 安装依赖，走你 (根据初始化的package.json安装)
+    $ npm install
+    # 启动服务器
+    $ npm run dev
+    ```
 
 ## Demo (点击链接查看效果)
 
