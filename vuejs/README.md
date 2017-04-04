@@ -41,3 +41,9 @@
 ## Demo (点击链接查看效果)
 
 - [D01-github-commit](https://oldinaction.github.io/smweb/vuejs/D01-github-commit/)
+    - 基于github提供的api，展示项目提交详情 (生命周期钩子、计算属性、观测、过滤器、ajax)
+- [D02-work-element](https://oldinaction.github.io/smweb/vuejs/D02-work-element/)
+    - 使用[element-starter通用模板(webpack)](https://github.com/ElementUI/element-starter)
+    - `npm install` 安装依赖
+    - `npm i vuex -S`、`npm i vue-router -S` 安装vue提供的mixin和路由
+    - `npm run dev` 启动服务
