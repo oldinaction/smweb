@@ -15,15 +15,6 @@
  */
 const home = r => require.ensure([], () => r(require('../pages/home/home.vue')), 'home') // 必须加.vue后缀，否则报错
 
-/*
-const profile = r => require.ensure([], () => r(require('../pages/profile/profile.vue')), 'profile')
-const info = r => require.ensure([], () => r(require('../pages/profile/children/info.vue')), 'info')
-const address = r => require.ensure([], () => r(require('../pages/profile/children/children/address.vue')), 'address')
-const add = r => require.ensure([], () => r(require('../pages/profile/children/children/children/add.vue')), 'add')
-const addDetail = r => require.ensure([], () => r(require('../pages/profile/children/children/children/children/addDetail.vue')), 'addDetail')
-const setusername = r => require.ensure([], () => r(require('../pages/profile/children/setusername.vue')), 'setusername')
-*/
-
 export default [{
     path: '/',
     component: home, // 顶层路由，对应index.html
@@ -38,32 +29,5 @@ export default [{
             path: '/home',
             component: home
         },
-        /*
-        // 个人信息页
-        {
-            path: '/profile',
-            component: profile,
-            children: [{
-                path: 'info', // 个人信息详情页
-                component: info,
-                children: [{
-                    path: 'address',
-                    component: address,  // 编辑地址
-                    children:[{
-                        path:'add',
-                        component:add,
-                        children:[{
-                            path:'addDetail',
-                            component:addDetail
-                        }]
-                    }]
-                }]
-            },
-            {
-                path: 'setusername',
-                component: setusername,
-            },]
-        },
-        */
     ]
 }]

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>App</h1>
+		<h1>工作实况</h1>
 		<transition name="router-fade" mode="out-in">
     		<router-view></router-view>
     	</transition>
@@ -9,7 +9,7 @@
 
 <script>
   	export default {
-		
+
   	}
 </script>
 
