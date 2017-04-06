@@ -25,7 +25,7 @@
 
 ## 进阶
 
-- B02-vuecli-webpack 使用vue-cli工具，初始化一个基于webpack模板的项目
+- B01-vuecli-webpack 使用vue-cli工具，初始化一个基于webpack模板的项目
 
     ```shell
     # 全局安装 vue-cli (vue脚手架：可初始化一个基本vue项目)
@@ -45,5 +45,5 @@
 - [D02-work-element](https://oldinaction.github.io/smweb/vuejs/D02-work-element/)
     - 使用[element-starter通用模板(webpack)](https://github.com/ElementUI/element-starter)
     - `npm install` 安装依赖
-    - `npm i vuex -S`、`npm i vue-router -S` 安装vue提供的mixin和路由
+    - `npm i vuex -S`、`npm i vue-router -S` 安装vue的vue-router(路由)和mixin
     - `npm run dev` 启动服务

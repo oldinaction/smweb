@@ -1,5 +1,10 @@
 var webpack = require("webpack");
 var path = require('path');
+/**
+ * html-webpack-plugin功能为：
+ * (1)为html文件中引入的外部资源如script、link动态添加每次compile后的hash，防止引用缓存的外部文件问题
+ * (2)可以生成创建html入口文件，配置N个html-webpack-plugin可以生成N个页面入口
+ */
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -25,6 +30,9 @@ module.exports = {
     plugins: [
 		// 提取多个入口文件的公共脚本部分(如每个页面引入了jquery)，然后生成一个 common.js
 		new webpack.optimize.CommonsChunkPlugin('common.js'),
+		// 将 webpack中`entry`配置的相关入口thunk  和  `extract-text-webpack-plugin`抽取的css样式
+		// 插入到该插件提供的`template`或者`templateContent`配置项指定的内容基础上生成一个html文件，
+		// 具体插入方式是将样式`link`插入到`head`元素中，`script`插入到`head`或者`body`中。
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname, "/app/index.tmpl.html")
 		}),
