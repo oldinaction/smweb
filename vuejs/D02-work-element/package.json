@@ -4,11 +4,13 @@
   "author": "smalle <oldinaction@qq.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server -d --inline --hot --env.dev",
+    "dev": "webpack-dev-server -d --inline --open --hot --env.dev",
     "build": "rimraf dist && webpack -p --progress --hide-modules"
   },
   "dependencies": {
     "element-ui": "^1.1.2",
+    "firebase": "^3.7.5",
+    "moment": "^2.18.1",
     "vue": "^2.1.8",
     "vue-router": "^2.3.1",
     "vuex": "^2.2.1"

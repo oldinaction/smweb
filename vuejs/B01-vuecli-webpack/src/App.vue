@@ -24,11 +24,19 @@
 <script>
 export default {
     name: 'rootDiv',
+    // .vue组件中的data数据必须以 data() 形式返回，其他Vue对象参数按照正常定义
     data() {
         return {
             msg: 'Welcome to Your Vue.js App'
         }
+    },
+    /*
+    watch: {
+        msg: function (val) {
+            console.log(val)
+        }
     }
+    */
 }
 </script>
 
