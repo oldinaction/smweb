@@ -42,15 +42,18 @@
 
 - [D01-github-commit](https://oldinaction.github.io/smweb/vuejs/D01-github-commit/)
     - 基于github提供的api，展示项目提交详情 (生命周期钩子、计算属性、观测、过滤器、ajax)
-- [D02-work-element](https://oldinaction.github.io/smweb/vuejs/D02-work-element/)
+- D02-work-element[github](https://github.com/oldinaction/smweb/tree/master/vuejs/D02-work-element)
+
+    ![工作清单预览](D02-work-element/work-element.png)
+
     1. 概要：基于vue框架，使用vue-router插件、element组件库、firebase数据存储搭建的任务清单demo
-    1. 运行步骤
+    2. 运行步骤
         - 使用[element-starter通用模板(webpack)](https://github.com/ElementUI/element-starter)
         - `npm install` 安装依赖
         - `npm i vuex -S`、`npm i vue-router -S` 安装vue的vue-router(路由)和mixin
         - `npm i firebase -S` 安装firebase(Google提供的服务，[介绍传送门](http://blog.aezo.cn/service/2017/03/19/firebase/))
         - `moment` 安装这些依赖
         - `npm run dev` 启动服务
-    2. 本示例思考：
+    3. 本示例思考：
         - 弹框页面和主页面分离
         - 新建一条数据后，vm.$data中关于此form的字段如何还原成初始值
