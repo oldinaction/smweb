@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>获取Github提交信息</title>
+</head>
+<body>
+	<div id="github">
+		github项目信息：
+		<input v-model="owner" placeholder="请输入用户ID">
+		<input v-model="repo" placeholder="请输入此用户项目ID">
+		<input type="button" @click="fetchData" value="查看">
+
+		<div v-show="showInfo">
+			<h3>{{ owner }}/{{ repo }} 近期提交</h3>
+
+			<template v-for="branch in branchs">
+				<label><input type="radio" name="branch"
+						:id="branch"
+						:value="branch"
+						v-model="currentBranch">{{ branch }}</label>
+			</template>
+
+			<ul>
+				<li v-for="item in commits">
+					<a :href="item.html_url" target="_blank">{{ item.sha.slice(0, 7) }}</a>
+					- <span>{{ item.commit.message }}</span><br/>
+					by <b><a :href="item.author.html_url" target="_blank">{{ item.commit.author.name }}</a></b>
+					at <span>{{ item.commit.author.date | formatDate }}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="vue.js"></script>
+	<script type="text/javascript">
+		// 构造Vue实例对象
+		var vm = new Vue({
+			// 挂载元素
+			el: '#github',
+			// 数据
+			data: {
+				owner: 'oldinaction',
+				repo: 'smweb',
+				branchs: ['master', 'gh-pages'],
+				currentBranch: 'master',
+				commits: null
+			},
+			// 生命周期钩子：创建
+			created: function() {
+				this.fetchData()
+			},
+			// 计算属性
+			computed: {
+				showInfo: function() {
+					return (this.owner != '' && this.repo != '') ? true : false
+				},
+				ajaxUrl: function () {
+					if(this.owner != '' && this.repo != '') {
+						return 'https://api.github.com/repos/' + this.owner + '/' + this.repo + '/commits?sha=' + this.currentBranch
+					} else {
+						return ''
+					}
+				}
+			},
+			// 观查：一般变量值改变后在此处异步调用后台
+			watch: {
+				// currentBranch: 'fetchData'
+				currentBranch: function() {
+					this.fetchData()
+				}
+			},
+			// 过滤器
+			filters: {
+				formatDate: function(v) {
+					// 此处对时间处理过于粗糙
+					return v.replace(/T|Z/g, ' ')
+				}
+			},
+			// 方法
+			methods: {
+				fetchData: function() {
+					this.commits = null
+					if(this.ajaxUrl != '') {
+						var _this = this
+						var xhr = new XMLHttpRequest()
+						xhr.open('GET', _this.ajaxUrl, true)
+						xhr.onload = function () {
+							if(xhr.status == 200) {
+								_this.commits = JSON.parse(xhr.responseText)
+								console.log(_this.commits)
+							}
+						}
+						xhr.send()
+					}
+				}
+			}
+		})
+	</script>
+
+</body>
+</html>

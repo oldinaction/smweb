@@ -3,6 +3,9 @@
 ## 介绍
 
 - [官方Doc (v2.0)](http://cn.vuejs.org/v2/guide/)
+- 工具介绍
+    - `vue-cli` vue脚手架：可通过npm安装，主要用于快速构建项目基本框架
+    - `vue-devtools` vue调试工具，可在chrome商店下载安装此浏览器插件
 
 ## 笔记
 
@@ -17,8 +20,37 @@
 
 ## 示例
 
-- [A-01-HelloWorld](https://oldinaction.github.io/smweb/vuejs/A-01-HelloWorld/)
+- [A01-helloworld](https://oldinaction.github.io/smweb/vuejs/A01-helloworld/)
+    - 无需安装任何依赖，只需要将vue.js引入到html文件中即可
+
+## 进阶
+
+- B01-vuecli-webpack 使用vue-cli工具，初始化一个基于webpack模板的项目
+
+    ```shell
+    # 全局安装 vue-cli (vue脚手架：可初始化一个基本vue项目)
+    $ npm install --global vue-cli
+    # 在当前目录创建一个基于 webpack 模板的项目
+    $ vue init webpack-simple
+    # 安装依赖，走你 (根据初始化的package.json安装)
+    $ npm install
+    # 启动服务器
+    $ npm run dev
+    ```
 
 ## Demo (点击链接查看效果)
 
-- [D-01-GithubCommit](https://oldinaction.github.io/smweb/vuejs/D-01-GithubCommit/)
+- [D01-github-commit](https://oldinaction.github.io/smweb/vuejs/D01-github-commit/)
+    - 基于github提供的api，展示项目提交详情 (生命周期钩子、计算属性、观测、过滤器、ajax)
+- [D02-work-element](https://oldinaction.github.io/smweb/vuejs/D02-work-element/)
+    1. 概要：基于vue框架，使用vue-router插件、element组件库、firebase数据存储搭建的任务清单demo
+    1. 运行步骤
+        - 使用[element-starter通用模板(webpack)](https://github.com/ElementUI/element-starter)
+        - `npm install` 安装依赖
+        - `npm i vuex -S`、`npm i vue-router -S` 安装vue的vue-router(路由)和mixin
+        - `npm i firebase -S` 安装firebase(Google提供的服务，[介绍传送门](http://blog.aezo.cn/service/2017/03/19/firebase/))
+        - `moment` 安装这些依赖
+        - `npm run dev` 启动服务
+    2. 本示例思考：
+        - 弹框页面和主页面分离
+        - 新建一条数据后，vm.$data中关于此form的字段如何还原成初始值
