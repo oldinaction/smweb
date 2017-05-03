@@ -1,25 +1,26 @@
 <template>
-<div id="page-container">
-    <el-row>
-        <el-col :md="12">
-        <el-button
-          size="small"
-          @click="userDialogFormVisible = true">用户管理</el-button>
-        <el-button
-          size="small"
-          @click="showEditWorkDialog()">新建任务</el-button>
-        </el-col>
-    </el-row>
-    <el-row :gutter="10">
-        <el-col :md="14">
-            <el-table :data="workings" stripe style="width: 100%">
-                <el-table-column prop="startDate" label="日期" width="120">
-                </el-table-column>
-                <el-table-column prop="name" label="童鞋" width="140">
-                </el-table-column>
-                <el-table-column prop="desc" label="任务描述">
-                </el-table-column>
-                <el-table-column label="操作" width="140">
+    <div id="page-container">
+        <el-row>
+            <el-col :md="12">
+                <el-button
+                  size="small"
+                  @click="userDialogFormVisible = true">用户管理</el-button>
+                <el-button
+                  size="small"
+                  @click="showEditWorkDialog()">新建任务</el-button>
+                <router-link to="/home/children">显示子组件</router-link>
+            </el-col>
+        </el-row>
+        <el-row :gutter="10">
+            <el-col :md="14">
+                <el-table :data="workings" stripe style="width: 100%">
+                    <el-table-column prop="startDate" label="日期" width="120">
+                    </el-table-column>
+                    <el-table-column prop="name" label="童鞋" width="140">
+                    </el-table-column>
+                    <el-table-column prop="desc" label="任务描述">
+                    </el-table-column>
+                    <el-table-column label="操作" width="140">
                     <template scope="scope">
                           <el-button
                             size="small"
@@ -29,8 +30,8 @@
                             type="danger"
                             @click="editWork(true, scope.row.key)">完成</el-button>
                     </template>
-                  </el-table-column>
-              </el-table>
+                    </el-table-column>
+                </el-table>
             </el-col>
             <el-col :md="10">
                 <el-table :data="workHistory" stripe style="width: 100%">
@@ -93,6 +94,9 @@
               </div>
             </el-dialog>
         </div>
+
+        <!--子组件路由出口-->
+        <router-view></router-view>
     </div>
 </template>
 

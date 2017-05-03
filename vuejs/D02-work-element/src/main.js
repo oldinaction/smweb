@@ -1,11 +1,12 @@
+// 先解析依赖，即先逐个解析import(如 App.vue)，再从第一行解析main.js
 import Vue from 'vue' // 写成 import Vue from 'vue/dist/vue.js' 会报错
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import VueRouter from 'vue-router'
-import Firebase from 'firebase'
+
+import App from './App.vue'
 import routes from './router/router' // 导入./router/router.js
 import store from './store/' // 默认导入store文件夹下的index.js
-import App from './App.vue'
 
 Vue.use(ElementUI)
 
@@ -13,14 +14,6 @@ Vue.use(VueRouter)
 const router = new VueRouter({
 	routes //（缩写）相当于 routes: routes
 })
-
-// Initialize Firebase
-var firebaseConfig = {
-    apiKey: "AIzaSyAJyjg2BHpnBL68576ktQKSlFj2swblwTA",
-    authDomain: "web-vue.firebaseapp.com",
-    databaseURL: "https://web-vue.firebaseio.com",
-};
-Firebase.initializeApp(firebaseConfig);
 
 new Vue({
 	router,

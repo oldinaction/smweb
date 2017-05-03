@@ -13,21 +13,26 @@
          'home')
  }
  */
+
 const home = r => require.ensure([], () => r(require('../pages/home/home.vue')), 'home') // 必须加.vue后缀，否则报错
+const children = r => require.ensure([], () => r(require('../pages/home/children.vue')), 'children')
+const user = r => require.ensure([], () => r(require('../pages/user/user.vue')), 'user')
+
 
 export default [{
-    path: '/',
-    component: home, // 顶层路由，对应index.html
-    children: [ // 二级路由。对应App.vue
-        //地址为空时跳转home页面
+    path: '',
+    redirect: '/home'
+},{
+    path: '/home',
+    component: home,
+    children: [
         {
-            path: '',
-            redirect: '/home'
-        },
-        // 首页
-        {
-            path: '/home',
-            component: home
+            // 以 / 开头的嵌套路径会被当作根路径
+            path: 'children',
+            component: children,
         },
     ]
+},{
+    path: '/user',
+    component: user,
 }]

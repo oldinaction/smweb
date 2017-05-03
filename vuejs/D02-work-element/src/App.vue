@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>工作实况</h1>
+		<h2><router-link to="/home">工作实况</router-link>、<router-link to="/user">用户信息</router-link></h2>
 		<transition name="router-fade" mode="out-in">
     		<router-view></router-view>
     	</transition>
@@ -8,6 +8,15 @@
 </template>
 
 <script>
+	import Firebase from 'firebase'
+	// Initialize Firebase
+	var firebaseConfig = {
+	    apiKey: "AIzaSyAJyjg2BHpnBL68576ktQKSlFj2swblwTA",
+	    authDomain: "web-vue.firebaseapp.com",
+	    databaseURL: "https://web-vue.firebaseio.com",
+	};
+	Firebase.initializeApp(firebaseConfig);
+
   	export default {
 
   	}

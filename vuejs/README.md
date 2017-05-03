@@ -54,6 +54,18 @@
         - `npm i firebase -S` 安装firebase(Google提供的服务，[介绍传送门](http://blog.aezo.cn/service/2017/03/19/firebase/))
         - `moment` 安装这些依赖
         - `npm run dev` 启动服务
-    3. 本示例思考：
+    3. 注意事项：
+        - firebase数据库需要设置成可匿名登录
+        - firebase数据库规则配置成公开访问
+
+            ```json
+            {
+              "rules": {
+                ".read": true,
+                ".write": true
+              }
+            }
+            ```
+    4. 本示例思考：
         - 弹框页面和主页面分离
         - 新建一条数据后，vm.$data中关于此form的字段如何还原成初始值
