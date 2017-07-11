@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jquery插件 - 链式调用</title>
+  </head>
+  <body>
+    <ul>
+    	<li>
+    		<a href="http://www.baidu.com/">百度</a>
+    	</li>
+    	<li>
+    		<a href="http://www.taobao.com/">淘宝</a>
+    	</li>
+    	<li>
+    		<a href="http://www.qq.com/">腾讯</a>
+    	</li>
+    </ul>
+    <p style="font-size:12px;">这是p标签不是a标签，我不会受影响</p>
+
+    <script type="text/javascript" src="jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="demo3.js"></script>
+    <script type="text/javascript">
+      $("a").myPlugin({
+          fontSize: "14px"
+      }).css("font-weight", "900");
+
+    </script>
+  </body>
+</html>

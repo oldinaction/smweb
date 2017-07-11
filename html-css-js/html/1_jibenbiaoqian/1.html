@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>Html笔记 - 基本标签 - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			
+		</style>
+
+	</head>
+<body style="background:url(../2_img/images/bg.png) repeat;">
+	<h1 style="text-align:center;">Html笔记 - 基本标签 - 小易</h1>
+	锚链接：<a href="#html语法简介">html语法简介</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#html基本标签">html基本标签</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#html实体">html实体</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#html排版标签">html排版标签</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#html超链接标签">html超链接标签</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#marquee滚动标签">marquee滚动标签</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#frameset框架标签">frameset标签</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="#iframe内链标签">iframe内链标签</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+	<h3><a name="html语法简介">一、html语法简介</a></h3>
+	<p>1、html标签和元素:html标签是组成html元素的，如一对body标签就是一个元素，一对p标签组成的也是一个元素</p>
+	<p>2、html标签是由尖括号包围的关键词，比如 &lt;html&gt;</p>
+	<p>3、html标签通常是成对出现的,也有单个的</p>
+	<p>4、html的结构包括头部（head）、主体（body）两大部分</p>
+	<p>5、&gt;!DOCTYPE&gt;标签，如：&lt;!doctype html&gt;</p>
+	<p>6、html属性和属性值，如：&lt;body bgcolor=&quot;red&quot;&gt; bgcolor就是body标签的一个属性</p>
+	<p>7、书写注意事项:字母最好使用<font color="red">小写</font>，大写也可以实现；属性值通常使用<font color="red">双引号</font>包围，单引号也可以实现</p>
+
+	<h3><a name="html基本标签">二、html基本标签</a></h3>
+	<h4>1、段落标签：&lt;p&gt; &lt;/p&gt; 他会自动换行</h4>
+	<h4>2、标题标签：</h4>
+	<p>
+	<font color="red">注意事项</font>：h1在一个html文档里面只能使用一次，这样有利于SEO优化
+	<h1>&lt;h1&gt; &lt;/h1&gt;</h1>
+	<h2>&lt;h2&gt; &lt;/h2&gt;</h2>
+	<h3>&lt;h3&gt; &lt;/h4&gt;</h3>
+	<h4>&lt;h4&gt; &lt;/h4&gt;</h4>
+	<h5>&lt;h5&gt; &lt;/h5&gt;</h5>
+	<h6>&lt;h6&gt; &lt;/h6&gt;</h6>
+	</p>
+	<h4>3、换行标签：&lt; br /&gt;</h4>
+	<h4>4、注释标签：&lt;!-- --&gt;</h4>
+	<h4>5、预格式标签：&lt;pre&gt;&lt;/pre&gt;</h4>
+	&lt;pre&gt;<br />
+		&lt;p&gt;<br />
+			&lt;b&gt;预格式1&lt;/b&gt;<br />
+			&lt;strong&gt;预格式2&lt;/strong&gt;<br />
+		&lt;/p&gt;<br />
+	&lt;/pre&gt;<br /><br />
+
+	效果如下：（前面的缩进也会保留）<br />
+	<pre>
+		&lt;p&gt;
+			&lt;b&gt;预格式1&lt;/b&gt;
+			&lt;strong&gt;预格式2&lt;/strong&gt;
+		&lt;/p&gt;
+	</pre>
+
+	<h3><a name="html实体">三、html实体</a></h3>
+	<p>小于号： &amp;lt; &nbsp;&nbsp;&nbsp;&nbsp;效果：&lt;</p>
+	<p>大于号： &amp;gt; &nbsp;&nbsp;&nbsp;&nbsp;效果：&gt;</p>
+	<p>引号： &amp;quot; &nbsp;&nbsp;&nbsp;&nbsp;效果：&quot;</p>
+	<p>空格： &amp;nbsp; </p>
+	<p>版权号： &amp;copy; &nbsp;&nbsp;&nbsp;&nbsp;效果：&copy;</p>
+
+	<h3><a name="html排版标签">四、html排版标签</a></h3>
+	<p>1、font标签：&lt;font&gt;&lt;/font&gt; 规定文本的字体、字体尺寸、字体颜色。标签属性如下:</p>
+	<p><font color="red">size</font> : 12,13 ...</p>
+	<p><font color="red">color</font> : red,blue,green,yellow  或者 颜色值#333</p>
+	<p><font color="red">face</font> :  "黑体" "微软雅黑" "宋体"</p>
+	<p>2、strong/b 加粗标签</p>
+	<p>
+	&lt;b&gt; &lt;/b&gt; &nbsp;&nbsp;和&nbsp;&nbsp; &lt;strong&gt; &lt;/strong&gt; <strong>都有对文本加粗效果</strong>
+	<br /><br />
+	但是strong用于强调文本，它强调的程度更强一些，表示重要文本，对SEO优化有用。
+	</p>
+
+	<h3><a name="html超链接标签">五、html超链接标签</a></h3>
+	<p>
+	&lt;a&gt; &lt;/a&gt;<br /><br />
+	A、一般链接：<a  href=“http://blog.csdn.net/oldinaction” target="_blank">链接到我的博客</a><br /><br />
+	B、锚链接，链接到本页面:<br /><br />
+	==>首先创建一个锚链接的锚记点:&nbsp;&nbsp;&nbsp;&nbsp; &lt;a  href="#锚记点名称"&gt;主题名称&lt;/a&gt;<br /><br />
+	==>然后在具体要链接到的地方设置name:&nbsp;&nbsp;&nbsp;&nbsp; &lt;a  name="锚记点名称"&gt;&lt;/a&gt;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">（锚记点前面要加上#号）</font><br /><br />
+	==>有时候页面高度不够，点击锚链接后，要链接到的位置不会显示在浏览器的第一行，因为此时页面的底部已经全部显示出来了。此时可以增加body高度实现。<br /><br />
+	C、电子邮件链接:<br /><br />
+	&lt;a  href="mailto:邮件地址"&gt;站长邮箱&lt;/a&gt;(注意不能忘了mailto) <a  href="mailto:oldinaction@qq.com">站长邮箱</a>
+	</p>
+
+	<h3><a name="marquee滚动标签">六、marquee滚动标签</a></h3>
+	<p>
+	&lt;marquee&gt;&lt;/marquee&gt;&nbsp;&nbsp;&nbsp;&nbsp;默认占一行<br /><br />
+	属性:文字移动方向：&nbsp;&nbsp;direction：left、right<br /><br />
+	&lt;marquee direction="left"&gt;向左飘&lt;/marquee&gt;<br /><br />
+	&lt;marquee direction="right"&gt;向右飘&lt;/marquee&gt;<br /><br />
+	效果如下：<br />
+	<marquee direction="left">向左飘</marquee>
+	<marquee direction="right">向右飘</marquee>
+	</p>
+
+	<h3><a name="frameset框架标签">七、frameset框架标签</a></h3>
+	示例代码：<br />
+	<pre>
+		&lt;frameset rows="10%,*"&gt;
+			&lt;frame src="top.html" noresize="noresize" /&gt;
+			&lt;frameset cols="16%,*"&gt;
+				&lt;frame src="left.html" /&gt;
+				&lt;frame src="content.html" name="show" /&gt;
+			&lt;/frameset&gt;
+		&lt;/frameset&gt;
+	</pre>
+	其中left主要代码：<br />
+	<pre>
+	&lt;a href="html/0/0.html" target="show"&gt;0 - Html - Html模板&lt;/a&gt;
+	&lt;a href="html/1/1.html" target="show"&gt;1 - Html - 基本标签&lt;/a&gt;
+	</pre>	
+	<font color="red"><b>注意：</b></font><br /><br />
+	<font color="red">1、frameset中含有frame</font><br /><br />
+	<font color="red">2、此时frameset代替了body，有frameset就不写body，frameset一般用于后台管理，在前台页面不利于SEO优化，src对应的目录下要有相对应的文件</font><br /><br />
+	<font color="red">3、上面的rows="10%,*"是将框架分为两行，左边为总宽度的10%，右边为剩下的</font><br /><br />
+	<font color="red">4、name="show"和target="show"的利用，表示点击左边框架的left页面中的链接，链接到的页面会显示在右边框架里，如果没有则在左边框架中显示</font><br /><br />
+	<font color="red">5、noresize="noresize"表示不能改变框架大小</font><br />
+		
+	<h3><a name="iframe内链标签">八、iframe内链标签</a></h3>
+	示例代码：<br /><br />
+	&lt;iframe width="800" height="600" src="#"&gt;&lt;/iframe&gt;<br /><br />
+	<font color="red">iframe可以写在body体内</font>
+
+</body>
+</html>

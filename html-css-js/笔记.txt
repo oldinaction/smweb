@@ -1,0 +1,16 @@
+1、logo的使用标签
+a标签 + 背景图片形式
+a标签 + 图片
+使用h1+ a +img（建议）
+使用div
+h1标签只能使用一次，h2标签最多使用3次
+
+2、域名http://baidu.com和http://www.baidu.com和http://baidu.com/和http://www.baidu.com/
+建议统一使用，有利于优化，防止搜索分散
+
+3、图片名可以使用中划线
+
+::selection{background:pink;color:#fff}
+
+收索引擎更喜欢收录没有后缀的url
+如：http://127.0.0.1/login比http://127.0.0.1/login.jsp更易收录，且前者不会暴露项目的技术结构，别人不知道到底是用php，java,asp中的哪一种开发的

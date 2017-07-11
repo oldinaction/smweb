@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>Html笔记 - form表单 - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			
+		</style>
+
+	</head>
+<body style="background:url(../2_img/images/bg.png) repeat;">
+	<h1 style="text-align:center;">Html笔记 - form表单 - 小易</h1>
+	<form>
+		<h3>一、表单的介绍</h3>
+		表单是一个包含表单元素的区域。表单元素是允许用户在表单中（比如：文本域、下拉列表、单选框、复选框等等）输入信息的元素表单使用表单标签（&lt;form&gt;）定义<br /><br />
+		&lt;form&gt;属一个容器标记，表示其他表单标记需要在他的包围中才有效 ，例如&lt;input/&gt;<br /><br />
+		&lt;form&gt;的属性:<br />
+		<font color="red">action</font> 是指表单提交后 信息发送到web服务器上，有action制定的程序处理 <br />
+		<font color="red">method</font> 指向服务器发送数据的方法（post 或 get）<br />
+
+		<h3>二、文本域（Text Fields）</h3>
+		用户名：&lt;input type="text"/&gt;<br /><br />
+		密码：&lt;input type="password"/&gt;<br /><br />
+		多行输入框：&lt;textarea rows="3" cols="20"&gt;&lt;/textarea&gt;<br /><br />
+		<font color="red">注意：多行输入框是&lt;textarea&gt;&lt;/textarea&gt;&nbsp;&nbsp;&nbsp;&nbsp;rows：行；cols：列；</font><br /><br /><br />	
+
+		效果如下：<br /><br />
+		用户名：<input type="text"><br /><br />
+		密码：<input type="password"><br /><br />
+		文本：<textarea rows="3" cols="20"></textarea><br /><br />
+
+		<h3>三、单选按钮（Radio Buttons）</h3>
+		性别：<br /><br />
+		&lt;input type="radio" name="sex" value="男"/&gt;男<br /><br />
+		&lt;input type="radio" name="sex" value="女"/&gt;女<br /><br />
+		&lt;input type="radio" name="sex" value="女博士"/&gt;女博士<br /><br />
+		<font color="red">注意几个选项的name属性必须有且一样</font><br /><br /><br />
+
+		效果如下：<br /><br />
+		性别：
+		<input type="radio" name="sex" value="男"/>男&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="sex" value="女"/>女&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="sex" value="女博士"/>女博士<br /><br />
+
+		<h3>三、复选框（Checkboxes）</h3>
+		&lt;input type="checkbox" name="jishu" value="J2SE"/&gt;J2SE<br /><br />
+		&lt;input type="checkbox" name="jishu" value="J2EE"/&gt;J2EE<br /><br />
+		&lt;input type="checkbox" name="jishu" value="HTML"/&gt;HTML<br /><br />
+		&lt;input type="checkbox" name="jishu" value="CSS"/&gt;CSS<br /><br />
+		&lt;input type="checkbox" name="jishu" value="MySQL"/&gt;MySQL<br /><br /><br /><br />
+		
+		效果如下：<br /><br />
+		掌握的技术：
+		<input type="checkbox" name="jishu" value="J2SE"/>J2SE&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="jishu" value="J2EE"/>J2EE&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="jishu" value="HTML"/>HTML&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="jishu" value="CSS"/>CSS&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="checkbox" name="jishu" value="MySQL"/>MySQL
+
+		<h3>四、按钮（Buttons）</h3>
+		&lt;input type="button" value="普通按钮" /&gt;<br /><br />
+		&lt;input type="reset" value="重  置" /&gt;<br /><br />
+		&lt;input type="submit" value="提  交" /&gt;<br /><br />
+		
+		效果如下：<br /><br />
+		<input type="button" value="普通按钮" />
+		<input type="reset" value="重  置" />
+		<input type="submit" value="提  交" />
+
+		<h3>五、下拉列表</h3>
+		下拉列表:<br /><br />
+		&lt;select size="2"&gt;<br /><br />
+			&lt;option&gt;春天&lt;/option&gt;<br /><br />
+			&lt;option selected="selected"&gt;夏天&lt;/option&gt;<br /><br />
+			&lt;option&gt;秋天&lt;/option&gt;<br /><br />
+			&lt;option&gt;冬天&lt;/option&gt;<br /><br />
+		&lt;/select&gt;<br /><br />
+		<font color="red">此时selected="selected"就是默认选择这一项，size：显示几个选项</font><br /><br /><br />
+
+		效果如下：<br /><br />
+		下拉列表:
+		<select size="2">
+			<option>春天</option>
+			<option selected="selected">夏天</option>
+			<option>秋天</option>
+			<option>冬天</option>
+		</select>
+
+		<h3>六、label标签</h3>
+		将文字包裹成一个label标签，可以点击文字而选择对应的选项<br /><br />
+		性别：<br /><br />
+		&lt;input type="radio" name="sex" value="男" id="nan"/&gt;&lt;label for="nan"&gt;男&lt;/label&gt;<br /><br />
+		&lt;input type="radio" name="sex" value="女" id="nv"/&gt;&lt;label for="nv"&gt;女&lt;/label&gt;<br /><br />
+		&lt;input type="radio" name="sex" value="女博士" id="nbs"/&gt;&lt;label for="nbs"&gt;女博士&lt;/label&gt;<br /><br />
+		<font color="red">label里面的for属性值和input的id属性值要一样，checkbox也是可以的</font><br /><br /><br />
+
+		效果如下：<br /><br />
+		性别：
+		<input type="radio" name="sex" value="男" id="nan"/><label for="nan">男</label>&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="sex" value="女" id="nv"/><label for="nv">女</label>&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="sex" value="女博士" id="nbs"/><label for="nbs">女博士</label><br /><br />
+
+		<h3>七、影藏标签</h3>
+		&lt;input type="hidden" name="hid" value="value"/&gt;<br /><br />
+
+		效果如下(在网页表面是看不到的)：<br /><br />
+		<input type="hidden" name="hid" value="value">
+
+	</form>
+
+	<h3>八、表格</h3>
+		&lt;table border="1"&gt;<br />
+			&nbsp;&nbsp;&lt;th colspan="4"&gt;LOL英雄&lt;/th&gt;<br /><br />
+
+			&nbsp;&nbsp;&lt;tr&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;td rowspan="3"&gt;ADC&lt;/td&gt;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--此处的3行是源代码中占3个tr--&gt;<br />
+			&nbsp;&nbsp;&lt;/tr&gt;<br /><br />
+
+			&nbsp;&nbsp;&lt;tr&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;EZ&lt;/td&gt;<br />
+			&nbsp;&nbsp;&lt;/tr&gt;<br /><br />
+
+			&nbsp;&nbsp;&lt;tr&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;皮城女警&lt;/td&gt;<br />
+			&nbsp;&nbsp;&lt;/tr&gt;<br /><br />
+
+			&nbsp;&nbsp;&lt;tr&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;AP&lt;/td&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;流浪法师&lt;/td&gt;<br />
+			&nbsp;&nbsp;&lt;/tr&gt;<br /><br />
+
+			&nbsp;&nbsp;&lt;tr&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;坦克&lt;/td&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;德玛&lt;/td&gt;<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;荒漠屠夫&lt;/td&gt;<br />
+			&nbsp;&nbsp;&lt;/tr&gt;<br />
+	&lt;/table&gt;<br />
+	<font color="red">th表格标题，tr行，td列</font><br />
+	<font color="red">注意是rowspan和colspan而不是rows和cols</font><br /><br /><br />
+
+	效果如下：<br /><br />
+	<table border="1">
+		<th colspan="4">LOL英雄</th>
+
+		<tr>
+			<td rowspan="3">ADC</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">EZ</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">皮城女警</td>
+		</tr>
+
+		<tr>
+			<td>AP</td>
+			<td colspan="2">流浪法师</td>
+		</tr>
+
+		<tr>
+			<td>坦克</td>
+			<td>德玛</td>
+			<td>荒漠屠夫</td>
+		</tr>
+	</table>
+
+
+	<h3>九、全部应用举例</h3>
+	<form action="#" method="post">
+	
+	用户名：<input type="text" name="username" value="输入用户名 ..."/><br /><br />
+	密 码：<input type="password"  name="passowrd"/> <br /><br />
+	性别：<input type="radio" name="sex" value="男" checked="checked"/> 男 
+		  <input type="radio" name="sex" value="女" /> 女
+		  <input type="radio" name="sex" value="女" /> 女博士 <br /><br />
+	兴趣爱好：
+		<input type="checkbox" name=""/> 篮球
+		<input type="checkbox" name=""/> 乒乓球
+		<input type="checkbox" name="" checked="checked"/> 书法 <br /><br />
+	生日：
+		年 <select size="2">
+			<option value="0">--请选择年--</option>
+			<option value="1">1986年</option>
+			<option value="1">1987年</option>
+			<option value="1">1988年</option>
+			<option value="1">1989年</option>
+			<option value="1" selected>1990年</option>
+		</select>
+		月 <select>
+			<option value="0">--请选择月--</option>
+			<option value="1">1月</option>
+			<option value="1">2月</option>
+			<option value="1">3月</option>
+			<option value="1">4月</option>
+			<option value="1">5月</option>
+		</select>
+		日 <select>
+			<option value="0">--请选择日--</option>
+			<option value="1">1</option>
+			<option value="1">2</option>
+			<option value="1">3</option>
+			<option value="1">4</option>
+			<option value="1">5</option>
+		</select><br /><br />
+
+		简介描述:
+		<textarea cols="60" rows="6"></textarea> <br /><br />
+
+		<input type="submit" value="提  交"/>
+		<input type="reset" value="重  置"/>
+
+		<input type="button" value="click me !" />
+
+	</form>
+
+</body>
+</html>

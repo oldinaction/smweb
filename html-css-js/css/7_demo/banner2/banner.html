@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>javaWeb - banner切换</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{font-size:12px;font-family:"微软雅黑";color:#666;}
+			img{border:0;}
+			.banner{width:560px;height:290px;background:#CCCCFF;margin:150px auto;
+				overflow:hidden; position:relative;
+			}
+			.banner ul{position:absolute;left:0;bottom:0;}
+			.banner ul li{list-style:none;float:left;
+				width:186px;height:27px;background:#000;color:#fff;
+				text-align:center;line-height:27px;cursor: pointer;
+			}
+			.banner .focus{background:red;}
+
+		</style>
+
+	</head>
+<body>
+
+
+	<div class="banner">
+		
+		<p>
+			<a href="#">
+				<img src="images/1.jpg" width="560" height="290" alt="美丽的时光-BestTime"/>
+			</a>
+		</p>
+		<p>
+			<a href="#">
+				<img src="images/2.gif" width="560" height="290" alt="我们一起结婚吧"/>
+			</a>
+		</p>
+		<p>
+			<a href="#">
+				<img src="images/3.jpg" width="560" height="290" alt="那些年我们一起追过的女孩"/>
+			</a>
+		</p>
+		
+
+		<ul>
+			<li class="focus">美丽的时光-BestTime</li>
+			<li>我们一起结婚吧</li>
+			<li>那些年我们一起追过的女孩</li>
+		</ul>
+	
+	</div>
+
+
+<!--引入jQuery的官方类库-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<!--引入自定义切换banner图js-->
+<script type="text/javascript" src="js/focus.js"></script>
+
+</body>
+</html>

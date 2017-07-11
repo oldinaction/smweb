@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>Html笔记 - 3种列表 - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			
+		</style>
+
+	</head>
+<body style="background:url(../2_img/images/bg.png) repeat;">
+	<h1 style="text-align:center;">Html笔记 - 3种列表 - 小易</h1>
+	<h3>一、无序列表: ul li</h3>
+	-------无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记--------<br />
+	<p>
+		&lt;ul&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;第一行&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;第二行&lt;/li&gt;<br />
+		&lt;/ul&gt;<br /><br />
+
+		如：<br />
+		<ul>
+			<li>第一行</li>
+			<li>第二行</li>
+			<li>第三行</li>
+		</ul>
+
+		------<font color="red">不同类型的无序列表： type="disc/circle(空心圆)/square(正方形实体)"项目符号列表</font>---------
+	<br /><br />
+
+	<ul type="square">
+		<li>列表项1</li>
+		<li>列表项2</li>
+		<li>列表项3</li>
+	</ul>
+
+	--------------嵌套列表： ul li(中嵌套ul li) --------------<br />
+	<font color="red">列表项内部可以使用段落、换行符、图片、链接以及其他列表</font>	
+
+	<ul>
+		<li>列表项1</li>
+		<li>
+			<ul>
+				<li>列表项1</li>
+				<li>
+					<ul>
+						<li>列表项2</li>
+						<li>
+							<ul>
+								<li>列表项1</li>
+								<li>列表项2</li>							
+							</ul>
+						</li>						
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>列表项2</li>
+		<li>列表项3</li>
+	</ul>
+	</p>
+
+
+	<h3>二、有序列表: ol li</h3>
+	-------和无序列表一样，有序列表是一列项目，列表项目使用数字进行标记--------<br />
+	<p>
+		&lt;ol&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;第一行&lt;/li&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;第二行&lt;/li&gt;<br />
+		&lt;/ol&gt;<br /><br />
+
+		如：<br />
+		<ol>
+			<li>第一行</li>
+			<li>第二行</li>
+			<li>第三行</li>
+		</ol>
+
+		----不同类型的有序列表：<font color="red">type="默认数字/大写字母A/小写字母a/大写罗马字母I/小写罗马字母i"</font>------
+	<ol type="A">
+		<li>列表项1</li>
+		<li>列表项2</li>
+		<li>列表项3</li>
+	</ol>
+	
+	<h3>三、自定义列表: dl dt dd</h3>
+	---------自定义列表不仅仅是一列项目，而是项目及其注释的组合-------- 
+	<p>
+		&lt;dl&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;自定义列表项1&lt;/dt&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;1-第一行&lt;/dd&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;1-第二行&lt;/dd&gt;<br />
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt;自定义列表项2&lt;/dt&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;2-第一行&lt;/dd&gt;<br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt;2-第二行&lt;/dd&gt;<br />
+		&lt;/dl&gt;<br /><br />
+		
+		如：<br />
+		<dl>
+			<dt>自定义列表项1</dt>
+			<dd>1-第一行</dd>
+			<dd>1-第二行</dd>
+
+			<dt>自定义列表项2</dt>
+			<dd>2-第一行</dd>
+			<dd>2-第二行</dd>
+			<dd>2-第三行</dd>
+
+			<dt>自定义列表项3</dt>
+			<dd><dd>3-第一行</dd></dd>
+			<dd><dd>3-第二行</dd></dd>
+		</dl>
+		
+	</p>
+
+</body>
+</html>

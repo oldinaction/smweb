@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>js函数</title>
+  </head>
+  <body>
+
+  <script type="text/javascript">
+      // 函数
+      console.log("===全局函数===");
+      console.log("---");
+      console.log(encodeURI("人")); // %E4%BA%BA
+      console.log(decodeURI("%E4%BA%BA")); // 人
+      console.log(decodeURI("http://www.aezo.cn/")); // http://www.aezo.cn/
+      console.log(encodeURIComponent("http://www.aezo.cn")); // http%3A%2F%2Fwww.aezo.cn
+      console.log(encodeURIComponent("人")); // %E4%BA%BA
+      console.log(decodeURIComponent("%E4%BA%BA")); // 人
+      console.log("---");
+      eval("console.log('这是eval()执行打印的');");
+      console.log("---");
+      var forArr = ['a', 'b', 'c'];
+      for(var i in forArr) { // i 是下标
+        console.log(i + "==>" + forArr[i]);
+      }
+
+
+
+
+
+
+  </script>
+
+  </body>
+</html>

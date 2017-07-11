@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>JS 插件</title>
+  </head>
+  <body>
+
+  <script type="text/javascript" src="moment.js"></script>
+  <script type="text/javascript" src="jsplugin.js"></script>
+  <script type="text/javascript">
+    var date = new Date();
+    console.log(date);
+
+    console.log(moment(date).format("YYYY-MM-DD HH:mm:ss"));
+    console.log(moment());
+    console.log(moment); // console.log(window.moment);
+
+    var me = person("smalle", "男", "18");
+    console.log(me);
+    console.log(me._name);
+
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>js 数组</title>
+  </head>
+  <body>
+
+  <script type="text/javascript">
+    // 数组
+    console.log("===数组===");
+    var arr = [1, 'abc', true];
+    console.log(arr[1]); // abc
+    arr[4] = 10;
+    console.log(arr); // [1, "abc", true, 4: 10]
+    console.log(arr.length); // 5
+    console.log(arr[1]); // abc
+    console.log(arr[3]); // undefined
+    console.log(arr[4]); // 10
+
+    console.log("---");
+    var arr1 = new Array(3);
+    var arr2 = new Array(1, 'a', true);
+    document.write(arr1 + "<br />"); // ,,
+    document.write(arr2 + "<br />"); // 1, a, true
+    document.write(arr2[arr2.length - 1] + "<br />"); // true
+    arr2.length = 5;
+    document.write(arr2 + "<br />"); // 1,a,true,,
+    arr2.length = 2; // 缩容后，后面的数据还在的，但是是访问不到
+    document.write(arr2 + "<br />"); // 1, a
+
+
+  </script>
+
+  </body>
+</html>

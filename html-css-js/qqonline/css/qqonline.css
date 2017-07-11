@@ -1,0 +1,188 @@
+/*全局样式 start*/
+			*{margin:0;padding:0;}
+			/*body的样式*/
+			body{
+				font-size:12px;
+				font-family:"微软雅黑";
+				color:#666;
+				background:#eee;
+height:1500px;
+			}
+			a{text-decoration:none;}
+			img{border:0;}
+/*end 全局样式*/
+
+/*头部样式 start*/
+			/*顶部 start*/
+			.top{
+				width: 960px;
+				height:60px;
+				margin:10px auto;
+			}
+			.top .t_text a{
+				display:block;
+				float:left;
+				color:#af9e7a;
+				line-height:60px;
+				padding:0 10px;
+			}
+			.top .t_text a:hover{
+				color:#ff7000;
+			}
+			.top .t_img{
+				margin-right:200px;
+			}
+			.top .t_img span{
+				display:block;
+				width:74px;
+				height:45px;
+				float:right;
+			}
+			.top .t_img .sina_weibo{	
+				background: url(../images/head/sina_weibo.jpg)0 0;			
+			}
+			.top .t_img .tx_weibo{
+				background: url(../images/head/tx_weibo.jpg) 0 0;
+			}
+			.top .t_img .mailqq{
+				background: url(../images/head/mailqq.jpg) 0 0;
+			}
+			.top .t_img .rss{
+				background: url(../images/head/rss.jpg) 0 0;
+			}
+			.top .t_img .sina_weibo:hover{	
+				background: url(../images/head/sina_weibo.jpg)0 -45px;			
+			}
+			.top .t_img .tx_weibo:hover{
+				background: url(../images/head/tx_weibo.jpg) 0 -45px;
+			}
+			.top .t_img .mailqq:hover{
+				background: url(../images/head/mailqq.jpg) 0 -45px;
+			}
+			.top .t_img .rss:hover{
+				background: url(../images/head/rss.jpg) 0 -45px;
+			}
+			/*end 顶部*/
+			/*logo start*/
+			.logo{
+				width:960px;
+				margin: 50px auto 10px;
+			}
+			.logo .l_logo{
+				display:block;
+				float:left;
+				width:500px;
+			}
+			.logo .l_ads{
+				display:block;
+				float:right;
+				height:33px;
+				font-size: 14px;
+				color: rgb(255, 112, 0);
+				line-height: 33px;
+				margin-top: 30px;
+				padding: 0px 15px;
+			}
+		
+			/*end logo*/
+			/*导航的样式 start*/
+			.nav{
+				width:100%;
+				height:40px;
+				background:rgb(255, 162, 0);
+			}
+			.nav ul{
+				width:960px;
+				height:40px;
+				margin:0px auto; /*此处必须指定width后margin: 0px auto;才能有效，否则他会继承上面.nav的width:100%;同理也指定height。水平居中要指定width；垂直居中要指定height*/
+				border-left: 5px solid rgb(255, 174, 0);
+			}
+			.nav ul li{
+				float:left;
+				list-style:none;
+				font-size:16px;
+				padding-left:50px;
+				line-height:40px;
+			}
+			.nav ul li a{
+				color:#fff;
+			}
+			.nav ul li a:hover{
+				color:rgb(255, 112, 0);;
+			}
+			/*end 导航的样式*/
+/*end 头部样式*/
+
+
+/*页脚 start*/
+			.footer{
+				width:100%;
+				height:240px;
+				background:url(../images/footer/footerbg.png) repeat-x;
+			}
+			/*页脚订阅图片 start*/
+			.footer .f_image{
+				width:476px;
+				height:120px;
+				margin:0px auto;
+				padding-top:40px;
+				
+			}
+			.footer .f_image .rehome{
+				display:block;
+				float:left;
+				width:119px;
+				height:95px;
+				background:url(../images/footer/rehome.gif) 0 0 no-repeat;
+			}
+			.footer .f_image .xmlasrss{
+				display:block;
+				float:left;
+				width:119px;
+				height:95px;
+				background:url(../images/footer/xmlasrss.gif) 0 0 no-repeat;
+			}
+			.footer .f_image .qqemail{
+				display:block;
+				float:left;
+				width:119px;
+				height:95px;
+				background:url(../images/footer/qqemail.gif) 0 0 no-repeat;
+			}
+			.footer .f_image .addweb{
+				display:block;
+				float:left;
+				width:119px;
+				height:95px;
+				background:url(../images/footer/addweb.gif) 0 0 no-repeat;
+			}
+			.footer .f_image .rehome:hover{
+				background:url(../images/footer/rehome.gif) 0 -95px no-repeat;
+			}
+			.footer .f_image .xmlasrss:hover{
+				background:url(../images/footer/xmlasrss.gif) 0 -95px no-repeat;
+			}
+			.footer .f_image .qqemail:hover{
+				background:url(../images/footer/qqemail.gif) 0 -95px no-repeat;
+			}
+			.footer .f_image .addweb:hover{
+				background:url(../images/footer/addweb.gif) 0 -95px no-repeat;
+			}
+			/*end 页脚订阅图片*/
+			/*版权信息 start*/
+			.footer .copyright{
+				clear:both;
+				width:960px;
+				margin:0 auto;
+				text-align:center;
+				line-height:20px;
+				color:rgb(167, 95, 2);
+			}
+			.footer .copyright a{
+				color:rgb(167, 95, 2);
+			}
+			.footer .copyright a:hover{
+				color:#fff;
+			}
+			/*end 版权信息*/
+/*end 页脚*/

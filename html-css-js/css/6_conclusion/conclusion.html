@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>CSS总结 - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			body{background:url(images/bg.png);}
+
+			.s2 .s2_1:hover{text-decoration:none;}
+			.s2 .s2_2:hover img{border:2px solid red;}
+			.s2 span:hover{font-weight:900;}
+			
+			.s3 .s3_1{width:400px;margin:0 auto;background:#F00;}
+			.s3 .s3_2{width:400px;margin:0 auto;background:#F9C;}
+			.s3 .s3_3{width:200px;height:20px;margin:0 auto;background:#3F3;}
+			.s3 .s3_4{width:40%;height:20px;margin:0 auto;background:#09C;}
+			
+			.s4 .clear{clear:both;}
+			.s4 .big{float:left;width:300px;height:300px;}
+			.s4 .small_1{width:100px;height:100px;background:#996;}
+			.s4 .small_2{width:120px;height:120px;background:#699;}
+			.s4 .s4_1{border:1px solid #F00;}
+			.s4 .s4_2{border:1px solid #3F3;}
+			.s4 .s4_2 .s4_2_1{float:left;}
+			.s4 .s4_3{border:1px solid #F9C;}
+			.s4 .s4_3 .s4_3_2{float:left;}
+			.s4 .s4_4{border:1px solid #09C;}
+			.s4 .s4_4 .s4_4_1{float:left;}
+			.s4 .s4_4 .s4_4_2{float:left;}
+			.s4 .s4_5{border:1px solid #063;}
+			.s4 .s4_5 .s4_5_1{float:left;}
+			.s4 .s4_5 .s4_5_2{float:right;}
+			
+		</style>
+
+	</head>
+<body>
+	<h1 style="text-align:center;">总结 - 小易</h1>
+
+	<h4>1、<font color="red">消除a连接的下划线和img边框时，必须写在对应的a和img标签上</font></h4>
+	（1）若是文字连接：a{text-decoration:none;}（要写在对应的a标签上）<br /><br />
+	（2）若是图片连接：img{border:0;}（要写在对应的img标签上）<br /><br />
+	示例：<br />
+		<pre>
+			&lt;div style="float:left;text-decoration:none;border:0;"&gt;
+			&lt;a href="#"&gt;文字链接&lt;/a&gt;
+			&lt;a href="#" style="border:0;"&gt;&lt;img src="images/1.jpg"/&gt;&lt;/a&gt;
+			&lt;/div&gt;
+
+			&lt;div style="float:left;"&gt;
+				&lt;a href="#" style="text-decoration:none;"&gt;文字链接&lt;/a&gt;
+				&lt;a href="#"&gt;&lt;img src="images/1.jpg" style="border:0;"/&gt;&lt;/a&gt;
+			&lt;/div&gt;
+			&lt;div style="clear:both;"&gt;&lt;/div&gt;	
+		</pre>
+
+		<div style="float:left;text-decoration:none;border:0;">
+			<a href="#">文字链接</a>
+			<a href="#" style="border:0;"><img src="images/1.jpg"/></a>
+		</div>
+		<div style="float:left;">
+			<a href="#" style="text-decoration:none;">文字链接</a>
+			<a href="#"><img src="images/1.jpg" style="border:0;"/></a>
+		</div>
+		<div style="clear:both;"></div>
+
+	
+	<br />
+	<h4>2、<font color="red">hover相关的写法</font></h4>
+	如：a:hover{}&nbsp;&nbsp;&nbsp; a:hover img{}&nbsp;&nbsp;&nbsp; span:hover{}<br /><br />
+		示例：<br />
+		<pre>
+			&lt;style type="text/css"&gt;
+				.s2 .s2_1:hover{text-decoration:none;}
+				.s2 .s2_2:hover img{border:2px solid red;}
+				.s2 span:hover{font-weight:900;}
+			&lt;/style&gt;
+			------------------------------------
+			&lt;div class="s2"&gt;
+				&lt;a href="#" class="s2_1"&gt;鼠标滑过去掉下划线&lt;/a&gt;
+				&lt;a href="#" class="s2_2"&gt;&lt;img src="images/1.jpg"/&gt;&lt;/a&gt;
+				&lt;span&gt;鼠标滑过字体变粗&lt;/span&gt;
+			&lt;/div&gt;
+		</pre>
+		<div class="s2">
+			<a href="#" class="s2_1">鼠标滑过去掉下划线</a>
+			<a href="#" class="s2_2"><img src="images/1.jpg"/></a>
+			<span>鼠标滑过字体变粗</span>
+		</div>
+	
+		
+	<br />
+	<h4>3、<font color="red">居中对齐(margin:0 auto;)使用时要给定宽度</font></h4>
+	居中对齐(margin:0 auto;)，<font color="red">必须给定宽度，宽度可为%形式</font>，高度无要求（如果不写，子元素必须可以把这个容器撑起来）。<br /><br />
+		示例：<br />
+		<pre>
+			&lt;style type="text/css"&gt;
+				.s3 .s3_1{width:400px;margin:0 auto;background:#F00;}
+				.s3 .s3_2{width:400px;margin:0 auto;background:#F9C;}
+				.s3 .s3_3{width:200px;height:20px;margin:0 auto;background:#3F3;}
+				.s3 .s3_4{width:40%;height:20px;margin:0 auto;background:#09C;}
+			&lt;/style&gt;
+			------------------------------------
+			&lt;div class="s3"&gt;
+				&lt;div class="s3_1"&gt;&lt;/div&gt;
+				&lt;div class="s3_2"&gt;上面还有个div，但是里面没有其他元素把他撑起来，也没指定高度，所以没有显示出来&lt;/div&gt;
+				&lt;div class="s3_3"&gt;&lt;/div&gt;
+				&lt;div class="s3_4"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		</pre>
+		<div class="s3">
+			<div class="s3_1"></div>
+			<div class="s3_2">上面还有个div，但是里面没有其他元素把他撑起来，也没指定高度，所以没有显示出来</div>
+			<div class="s3_3"></div>
+			<div class="s3_4"></div>
+		</div>
+
+	
+	<br />
+	<h4>4、<font color="red">使用float时，指定元素宽度</font>有利于解决浏览器兼容问题</h4>
+	示例：<br />
+		<pre>
+			&lt;style type="text/css"&gt;
+				.s4 .clear{clear:both;}
+				.s4 .big{float:left;width:300px;height:300px;}
+				.s4 .small_1{width:100px;height:100px;background:#996;}
+				.s4 .small_2{width:120px;height:120px;background:#699;}
+				.s4 .s4_1{border:1px solid #F00;}
+				.s4 .s4_2{border:1px solid #3F3;}
+				.s4 .s4_2 .s4_2_1{float:left;}
+				.s4 .s4_3{border:1px solid #F9C;}
+				.s4 .s4_3 .s4_3_2{float:left;}
+				.s4 .s4_4{border:1px solid #09C;}
+				.s4 .s4_4 .s4_4_1{float:left;}
+				.s4 .s4_4 .s4_4_2{float:left;}
+				.s4 .s4_5{border:1px solid #063;}
+				.s4 .s4_5 .s4_5_1{float:left;}
+				.s4 .s4_5 .s4_5_2{float:right;}
+			&lt;/style&gt;
+			------------------------------------
+			&lt;div class="s4"&gt;
+				&lt;div class="big s4_1"&gt;
+					&lt;div class="small_1 s4_1_1"&gt;1&lt;/div&gt;
+					&lt;div class="small_2 s4_1_2"&gt;2&lt;/div&gt;
+					两个小div都没有设置浮动
+				&lt;/div&gt;
+				&lt;div class="big s4_2"&gt;
+					&lt;div class="small_1 s4_2_1"&gt;1&lt;/div&gt;
+					&lt;div class="small_2 s4_2_2"&gt;2&lt;/div&gt;
+					&lt;p&gt;第一个小div设置了左浮动&lt;/p&gt;
+					&lt;p&gt;&lt;font color="red"&gt;看数字2是在第一个div的边缘，说明第一个div占了第二个div的空间&lt;/font&gt;&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class="big s4_3"&gt;
+					&lt;div class="small_1 s4_3_1"&gt;1&lt;/div&gt;
+					&lt;div class="small_2 s4_3_2"&gt;2&lt;/div&gt;
+					&lt;p&gt;第二个小div设置了左浮动&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class="big s4_4"&gt;
+					&lt;div class="small_1 s4_4_1"&gt;1&lt;/div&gt;
+					&lt;div class="small_2 s4_4_2"&gt;2&lt;/div&gt;
+					&lt;p&gt;两个小div都设置左浮动&lt;/p&gt;
+					&lt;br /&gt;&lt;br /&gt;
+					&lt;p&gt;&lt;font color="red"&gt;实际中经常要达到这种效果，所以两个都要设置浮动&lt;/font&gt;&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class="big s4_5"&gt;
+					&lt;div class="small_1 s4_5_1"&gt;1&lt;/div&gt;
+					&lt;div class="small_2 s4_5_2"&gt;2&lt;/div&gt;
+					&lt;p&gt;第一个小div设置了左浮动，第二个小div设置了右浮动&lt;/p&gt;
+				&lt;/div&gt;
+				&lt;div class="clear"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		</pre>
+		<div class="s4">
+			<div class="big s4_1">
+				<div class="small_1 s4_1_1">1</div>
+				<div class="small_2 s4_1_2">2</div>
+				两个小div都没有设置浮动
+			</div>
+			<div class="big s4_2">
+				<div class="small_1 s4_2_1">1</div>
+				<div class="small_2 s4_2_2">2</div>
+				<p>第一个小div设置了左浮动</p>
+				<p><font color="red">看数字2是在第一个div的边缘，说明第一个div占了第二个div的空间</font></p>
+			</div>
+			<div class="big s4_3">
+				<div class="small_1 s4_3_1">1</div>
+				<div class="small_2 s4_3_2">2</div>
+				<p>第二个小div设置了左浮动</p>
+			</div>
+			<div class="big s4_4">
+				<div class="small_1 s4_4_1">1</div>
+				<div class="small_2 s4_4_2">2</div>
+				<p>两个小div都设置左浮动</p>
+				<br /><br />
+				<p><font color="red">实际中经常要达到这种效果，所以两个都要设置浮动</font></p>
+			</div>
+			<div class="big s4_5">
+				<div class="small_1 s4_5_1">1</div>
+				<div class="small_2 s4_5_2">2</div>
+				<p>第一个小div设置了左浮动，第二个小div设置了右浮动</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+
+	<br />
+	<h4>5、<font color="red">使用float时，指定元素宽度</font>有利于解决浏览器兼容问题</h4>
+
+
+	<br />
+	<h4>6、<font color="red">绝对定位时相对于最近的有position属性(body除外，他是所有元素的父级。值可以为relative，也可以为absolute)的父级元素</font></h4>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6的示例同7的示例
+
+	
+	<br />
+	<a name="s7"></a>
+	<h4>7、例子：span相对于a(为一个图片链接)，处于a的左下侧。<font color="red">此时a为relative，span为absolute（span相对于a绝对定位）</font></h4>
+	示例：<br />
+		<pre>
+			&lt;div&gt;
+				&lt;span href="#" style="position:relative"&gt;
+					span是行内元素，你猜我们能绝对定位吗！
+					&lt;span style="position:absolute;bottom:5px;right:5px;color:red;"&gt;行内元素也能绝对定位哦&lt;/span&gt;
+				&lt;/span&gt;
+				&lt;a href="#" style="position:relative"&gt;
+					&lt;img src="images/1.jpg"/&gt;
+					&lt;span style="position:absolute;bottom:10px;right:10px;"&gt;我的父级是a标签&lt;/span&gt;
+				&lt;/a&gt;
+				&lt;span style="position:absolute;bottom:10px;right:10px;"&gt;&lt;a href="#s8"&gt;我是第7个例子的效果，我的父级是body&lt;/a&gt;&lt;/span&gt;
+			&lt;/div&gt;
+		</pre>
+		<div>
+			<span href="#" style="position:relative">
+				span是行内元素，你猜我们能绝对定位吗！
+				<span style="position:absolute;bottom:5px;right:5px;color:red;">行内元素也能绝对定位哦</span>
+			</span>
+			<a href="#" style="position:relative">
+				<img src="images/1.jpg"/>
+				<span style="position:absolute;bottom:10px;right:10px;">我的父级是a标签</span>
+			</a>
+			<span style="position:absolute;bottom:10px;right:10px;"><a href="#s7">我是第7个例子的效果，绝对定位，我的父级是body</a></span>
+		</div>
+
+
+	<br />
+	<h4>7、布局。<font color="red">三列自适应宽度的写法：div顺序 左(左浮动，固定宽度) 右(右浮动，固定宽度) 中(不指定浮动和宽度，并加上外左右边距，外边距大小比左右div的宽度略大)</font></h4>
+	示例：<br />
+		<pre>
+			&lt;div style="width:40%;height:40px;background:#F0F;float:left;"&gt;两列自适应宽度写法&lt;/div&gt;
+				&lt;div style="width:60%;height:50px;background:#9F6;float:left;"&gt;两列自适应宽度写法&lt;/div&gt;
+				&lt;div style="clear:both;"&gt;&lt;/div&gt;
+				&lt;br /&gt;
+
+				&lt;div style="width:200px;height:50px;background:#F0F;float:left;"&gt;左侧div，width:200px;float:left;&lt;/div&gt;
+				&lt;div style="width:200px;height:50px;background:#9F6;float:right;"&gt;右侧div，width:200px;float:right;&lt;/div&gt;
+				&lt;div style="height:40px;background:#69f;margin:0 205px;"&gt;中间div，不指定width和float属性，margin: 0 205px;&lt;/div&gt;
+			&lt;div style="clear:both;"&gt;&lt;/div&gt;
+		</pre>
+		<div style="width:40%;height:40px;background:#F0F;float:left;">两列自适应宽度写法</div>
+		<div style="width:60%;height:50px;background:#9F6;float:left;">两列自适应宽度写法</div>
+		<div style="clear:both;"></div>
+		<br />
+		<div style="width:200px;height:50px;background:#F0F;float:left;">左侧div，width:200px;float:left;</div>
+		<div style="width:200px;height:50px;background:#9F6;float:right;">右侧div，width:200px;float:right;</div>
+		<div style="height:40px;background:#69f;margin:0 205px;">中间div，不指定width和float属性，margin: 0 205px;</div>
+		<div style="clear:both;"></div>
+
+
+
+
+
+</body>
+</html>

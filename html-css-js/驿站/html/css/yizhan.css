@@ -1,0 +1,576 @@
+/*全局样式 start*/
+			*{margin:0;padding:0;}
+			/*body的样式*/
+			body{
+				font-size:12px;
+				font-family:"微软雅黑";
+				color:#666;
+				background:#eee;
+height:1500px;
+			}
+			a{text-decoration:none;}
+			img{border:0;}
+/*end 全局样式*/
+
+/*头部样式 start*/
+			/*顶部 start*/
+			.top{
+				width: 960px;
+				height:60px;
+				margin:10px auto;
+			}
+			.top .t_text a{
+				display:block;
+				float:left;
+				color:#af9e7a;
+				line-height:60px;
+				padding:0 10px;
+			}
+			.top .t_text a:hover{
+				color:#ff7000;
+			}
+			.top .t_img{
+				margin-right:200px;
+			}
+			.top .t_img span{
+				display:block;
+				width:74px;
+				height:45px;
+				float:right;
+			}
+			.top .t_img .sina_weibo{	
+				background: url(../images/head/sina_weibo.jpg)0 0;			
+			}
+			.top .t_img .tx_weibo{
+				background: url(../images/head/tx_weibo.jpg) 0 0;
+			}
+			.top .t_img .mailqq{
+				background: url(../images/head/mailqq.jpg) 0 0;
+			}
+			.top .t_img .rss{
+				background: url(../images/head/rss.jpg) 0 0;
+			}
+			.top .t_img .sina_weibo:hover{	
+				background: url(../images/head/sina_weibo.jpg)0 -45px;			
+			}
+			.top .t_img .tx_weibo:hover{
+				background: url(../images/head/tx_weibo.jpg) 0 -45px;
+			}
+			.top .t_img .mailqq:hover{
+				background: url(../images/head/mailqq.jpg) 0 -45px;
+			}
+			.top .t_img .rss:hover{
+				background: url(../images/head/rss.jpg) 0 -45px;
+			}
+			/*end 顶部*/
+			/*logo start*/
+			.logo{
+				width:960px;
+				margin: 50px auto 10px;
+			}
+			.logo .l_logo{
+				display:block;
+				width:960px;
+			}
+			.logo .l_logo .search{
+				float:right;
+				width:205px;
+				height:33px;
+				background:url(../images/search_bg.gif) no-repeat;
+				margin-top: 30px;
+			}
+			.logo .l_logo .search input{
+				width: 170px;
+				line-height: 33px;
+				height: 33px;
+				color: rgb(255, 112, 0);
+				font-size: 14px;
+				border: none;
+				background: none;
+				padding: 0px 15px;
+			}
+			/*end logo*/
+			/*导航的样式 start*/
+			.nav{
+				width:100%;
+				height:40px;
+				background:rgb(255, 162, 0);
+			}
+			.nav ul{
+				width:960px;
+				height:40px;
+				margin:0px auto; /*此处必须指定width后margin: 0px auto;才能有效，否则他会继承上面.nav的width:100%;同理也指定height。水平居中要指定width；垂直居中要指定height*/
+				border-left: 5px solid rgb(255, 174, 0);
+			}
+			.nav ul li{
+				float:left;
+				list-style:none;
+				font-size:16px;
+				padding-left:50px;
+				line-height:40px;
+			}
+			.nav ul li a{
+				color:#fff;
+			}
+			.nav ul li a:hover{
+				color:rgb(255, 112, 0);;
+			}
+			/*end 导航的样式*/
+/*end 头部样式*/
+
+/*正文样式 start*/
+			/*展示 start*/
+			.show{
+				width:960px;
+				height:320px;
+				margin:40px auto 0;
+			}
+			.show table tr td a img{margin:-3px -1px;}
+				/*鼠标滑上时的效果.show table tr td a img:hover{margin:-3px -1px;border:2px solid rgb(255, 112, 0);}*/
+			.show table tr td a:hover{
+				opacity: 0.8;
+			}
+			/*end 展示*/			
+		
+			/*分割线-start*/
+			.line_sep1{
+				width:960px;
+				height:2px;
+				background:url(../images/line_sep_level.gif) repeat-x;
+				margin:25px auto 35px;
+				
+			}
+			/*end 分割线*/
+			/*文章分类 start*/
+			.article_list{
+				width:960px;
+				height:160px;
+				margin:0 auto;
+				background:url(../images/article_bg.gif);
+			}
+			.article_list ul{
+				width:960px;
+				height:26px;
+				margin:0 40px;
+			}
+			.article_list ul li{
+				width:150px;
+				height:26px;
+				float:left;
+				list-style:none;
+				font-size:16px;
+				text-align:left;
+				line-height:26px;				
+			}
+			.article_list ul li a{
+				color:rgb(175, 158, 122);
+			}
+			.article_list ul li a:hover{
+				color:rgb(255, 112, 0);
+			}
+			/*end 文章分类*/
+			/*分割线 start*/
+			.line_sep2{
+				width:960px;
+				height:2px;
+				background:url(../images/line_sep_level.gif) repeat-x;
+				margin:35px auto 25px;
+				
+			}
+			/*end 分割线*/
+			/*文章展示 start*/
+			.article{
+				width:960px;
+				margin:20px auto;
+			}
+			.article .article_one{
+				width: 296px;
+				float:left;
+				margin:0px 12px;
+			}
+			.article .article_one .title{
+				height:22px;
+				font-size:12px;
+				line-height:22px;
+				margin-bottom:10px;
+			} 
+			.article .article_one .title a{
+				color:#cc9d53;
+			}
+			.article .article_one .title a:hover{
+				color:#af9e7a;
+			}
+			.article .article_one .img{
+				padding: 8px;
+				border:1px solid #cacaca;
+				background: url(../images/article_imgbg.gif);
+			}
+			.article .article_one .count_1 img{
+				float:left;
+				margin:5px 10px 0px 0px;
+			}
+			.article .article_one .count_2 img{
+				float:right;
+				margin:5px 0px 0px 10px;
+			}
+			.article .article_one p{
+				line-height:20px;
+				font-size:14px;
+				margin-bottom:10px;
+			}
+			.article .article_one .more span{
+				display: block;
+				width:80px;
+				height:28px;
+				background:url(../images/readMore.jpg) 0 0 no-repeat;
+			}
+			.article .article_one .more span:hover{
+				display: block;
+				width:80px;
+				height:28px;
+				background:url(../images/readMore.jpg) 0 -28px no-repeat;
+			}
+			.arc_sep{
+				clear: both;
+				width:960px;
+				height:25px;
+				background: url(../images/arc_sep.gif) repeat-x scroll bottom;
+				margin-bottom:25px;
+			}
+			/*end 文章展示*/	
+			/*strat 页码*/
+			.page{
+				width:960px;
+				text-align:center;
+				margin:30px auto;		
+			}
+			
+			.page span a{
+				background:#cacaca;
+				border:1px solid #a2a2a2;
+				border-radius:3px;
+				margin:1px;
+				padding:3px 7px;
+				color:#fff;
+			}
+			.page span a:hover{
+				background:#ffa200;
+			}
+			/*end 页码*/
+/*end 正文样式*/
+
+/*附加 start*/
+			.additional{
+				width:100%;
+				height:970px;
+				background:url(../images/article_imgbg.gif);
+				border-top:1px solid #cacaca;			
+			}
+			.additional .gonggao{
+				width:621px;/*此时宽度必须和图片的宽度一致，下面的margin:10px auto;才能是图片居中*/
+				margin:50px auto;
+			}
+			.additional .gonggao .img_a{
+				width:621px;
+				height:46px;
+			}
+			.additional .gonggao .img_a a{
+				font-size:14px;
+				color:#af9e7a;
+				position:relative;
+				top:-37px;
+				left:80px;	
+			}
+			.additional .gonggao .img_a a:hover{
+				color:#ff7000;
+			}
+	/*附加中栏 start*/
+			.additional .additional_mid{
+				width:960px;
+				margin:0 auto;
+			}
+			/*分割线 start*/
+			.additional .additional_mid .line_sep3{
+				width:5px;
+				height:610px;
+				background:url(../images/line_sep_vertical.gif) repeat-y; /*level:水平；vertical:垂直*/
+				margin:0 12px 0 13px;
+				float:left;
+			}
+			/*end 分割线*/
+		/*附加中栏左侧 start*/
+			/*热门标签 start*/
+			.additional .additional_mid .additional_mid_left{
+				float:left;
+				width:300px;
+			}
+			.additional .additional_mid .additional_mid_left .a_label{	
+				height:350px;
+			}
+			.additional .additional_mid .additional_mid_left .a_label .label_title{
+				display:block; /*注意标签标题是在一个span标签中，而span标签是行记元素，需要转成block，下面的margin-bottom:10px;才能生效*/
+				font-size:16px;
+				color:#ff7000;
+				margin-bottom:10px;
+			}
+			.additional .additional_mid .additional_mid_left .a_label .label_title a{
+				font-size:14px;
+				color:#ff7000;
+			}
+			.additional .additional_mid .additional_mid_left .a_label .label_title a:hover{
+				color:#ffa200;
+			}
+			.additional .additional_mid .additional_mid_left .a_label ul{
+				list-style:none;
+			}
+			.additional .additional_mid .additional_mid_left .a_label ul li a{
+				height:25px;
+				float:left;
+				background:#ffa200;
+				padding: 2px 6px;
+				margin: 0 3px 5px 0;
+			}
+			.additional .additional_mid .additional_mid_left .a_label ul li a{
+				text-align:center;
+				line-height:25px;
+			}
+			.additional .additional_mid .additional_mid_left .a_label ul li a:hover{
+				background:#ff7000;
+			}
+			/*end 热门标签*/
+			/*文章归档 start*/
+			.additional .additional_mid .additional_mid_left .archives{
+				clear:both; /*清除浮动*/			
+				color:#ff7000;
+				margin-top:20px;
+				margin-bottom:20px;
+			}
+			.additional .additional_mid .additional_mid_left .archives h3{
+				font-size:16px;
+				margin-bottom:10px;
+			}
+			/*end 文章归档*/
+			/*登陆 start*/
+			.additional .additional_mid .additional_mid_left .login{
+				color:#ff7000;
+				margin-bottom:20px;
+			}
+			.additional .additional_mid .additional_mid_left .login h3{
+				font-size:16px;
+				margin-bottom:10px;
+			}
+			.additional .additional_mid .additional_mid_left .login form input{
+				margin-top:5px;
+				margin-bottom:5px;
+			}
+			.additional .additional_mid .additional_mid_left .login .btn{
+				padding:3px;
+				margin-right:20px;
+			}
+			/*end 登陆*/
+		/*end 附加中栏左侧*/
+			/*评论 start*/
+			.additional .additional_mid .a_comments{
+				float:left;
+				width:300px;
+			}
+			.additional .additional_mid .a_comments h3{
+				font-size:16px;
+				color:#ff7000;
+				margin-bottom:10px;
+			}
+			.additional .additional_mid .a_comments img{
+				 float:left;
+			}
+			.additional .additional_mid .a_comments .members{
+				float:left;
+				width:300px;
+			}
+			.additional .additional_mid .a_comments .members img{
+				display:block;
+				float:left;
+			}
+			.additional .additional_mid .a_comments .members .nameCont{
+				float:left;
+				font-size:14px;
+				line-height:22px;
+				margin:5px 0 5px 8px;
+			}
+			.additional .additional_mid .a_comments .members .nameCont .name{
+				color:#cc9d53;
+			}
+			.additional .additional_mid .a_comments .members .nameCont .name:hover{
+				color:#af9e7a;
+			}
+			.additional .additional_mid .a_comments .members .nameCont .content{
+				color:#b47015;
+			}
+			.additional .additional_mid .a_comments .members .nameCont .content:hover{
+				color:#af9e7a;
+			}
+			/*end 评论*/
+			/*关于我们 start*/
+			.additional .additional_mid .a_about{
+				float:left;
+				width:300px;
+			}
+			.additional .additional_mid .a_about h3{
+				font-size:16px;
+				color:#ff7000;
+				margin-bottom:10px;
+			}
+			.additional .additional_mid .a_about p{
+				font-size:100%;
+				line-height:20px;
+				text-indent:24px; /*缩进两个汉字的大小，此时字体大小为12px，所以缩进24px*/
+			}
+			.additional .additional_mid .a_about .about_images{
+				margin:8px;
+			}
+			.additional .additional_mid .a_about .about_images img{
+				/*此时图片的尺寸为140px，设置成125px显示图片，填充的6px就显示的背景颜色，此时为白色*/
+				width: 125px;
+				height: 125px;
+				margin-top: 15px;
+				padding: 6px;
+				background: #fff;
+				border: 1px solid #a1a1a1;
+			}
+			/*end 关于我们*/
+	/*end 附加中栏*/
+			/*友情链接 start*/
+			.additional .link .beautify{
+				clear:both;
+				width:508px;				
+				margin:0 auto;
+			}
+			.additional .link .beautify img{
+				margin-top:30px;
+			}
+			.additional .link .link_all{
+				width:960px;
+				margin:0 auto;
+			}
+			.additional .link .link_all .link_ico{
+				color:#ff7000;
+				margin-top:20px;
+				margin-bottom:20px;
+			}
+			.additional .link .link_all .link_ico h3{
+				font-size:16px;
+				margin-bottom:10px;
+			}
+			.additional .link .link_all ul{
+				list-style:none;
+			}
+			.additional .link .link_all ul li{
+				float:left;
+				margin:2px 80px 2px 0;
+			}
+			.additional .link .link_all ul li a{
+				font-size:14px;
+				color:#af9e7a;
+			}
+			.additional .link .link_all ul li a:hover{
+				color:#ff7000;
+			}
+			/*end 友情链接*/
+/*end 附加*/
+
+/*页脚 start*/
+			.footer{
+				width:100%;
+				height:240px;
+				background:url(../images/footer/footerbg.png) repeat-x;
+			}
+			/*页脚订阅图片 start*/
+			.footer .f_image{
+				width:476px;
+				height:120px;
+				margin:0px auto;
+				padding-top:40px;
+				
+			}
+			.footer .f_image .rehome{
+				display:block;
+				float:left;
+				width:119px;
+				height:95px;
+				background:url(../images/footer/rehome.gif) 0 0 no-repeat;
+			}
+			.footer .f_image .xmlasrss{
+				display:block;
+				float:left;
+				width:119px;
+				height:95px;
+				background:url(../images/footer/xmlasrss.gif) 0 0 no-repeat;
+			}
+			.footer .f_image .qqemail{
+				display:block;
+				float:left;
+				width:119px;
+				height:95px;
+				background:url(../images/footer/qqemail.gif) 0 0 no-repeat;
+			}
+			.footer .f_image .addweb{
+				display:block;
+				float:left;
+				width:119px;
+				height:95px;
+				background:url(../images/footer/addweb.gif) 0 0 no-repeat;
+			}
+			.footer .f_image .rehome:hover{
+				background:url(../images/footer/rehome.gif) 0 -95px no-repeat;
+			}
+			.footer .f_image .xmlasrss:hover{
+				background:url(../images/footer/xmlasrss.gif) 0 -95px no-repeat;
+			}
+			.footer .f_image .qqemail:hover{
+				background:url(../images/footer/qqemail.gif) 0 -95px no-repeat;
+			}
+			.footer .f_image .addweb:hover{
+				background:url(../images/footer/addweb.gif) 0 -95px no-repeat;
+			}
+			/*end 页脚订阅图片*/
+			/*版权信息 start*/
+			.footer .copyright{
+				clear:both;
+				width:960px;
+				margin:0 auto;
+				text-align:center;
+				line-height:20px;
+				color:rgb(167, 95, 2);
+			}
+			.footer .copyright a{
+				color:rgb(167, 95, 2);
+			}
+			.footer .copyright a:hover{
+				color:#fff;
+			}
+			/*end 版权信息*/
+/*end 页脚*/
+/*其他 start*/
+			.updown{
+				position: fixed;
+				top: 364px;
+				right: 30px;
+			}
+			.updown span{
+				display: block;
+				width: 48px;
+				height: 39px;
+			}
+			.updown .up{
+				background:url(../images/updown.png) 0 0 no-repeat;	
+			}
+			.updown .down{
+				
+				background:url(../images/updown.png) 0 -39px no-repeat;	
+			}
+			.updown .up:hover{
+				background:url(../images/updown.png) -80px 0 no-repeat;	
+			}
+			.updown .down:hover{
+				background:url(../images/updown.png) -80px -39px no-repeat;	
+			}
+/*end 其他*/

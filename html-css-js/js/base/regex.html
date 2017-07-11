@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>html模板</title>
+		<meta name="keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+
+		</style>
+
+	</head>
+<body>
+
+<div>test1==><span id="test1"></span></div><br />
+<div>test2==><span id="test2"></span></div><br />
+<div>test3==><span id="test3"></span></div><br />
+<div>test4==><span id="test4"></span></div><br />
+
+
+<script type="text/javascript" src="../jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+    // test1
+		var partyIdStr = "&#91;10004, 10005, 10006&#93;";
+		//var partyIdStr = "&#123;10004, 10005&#125;";
+		//var partyIdStr = "[10004, 10005]";
+		//var partyIdStr = "{10004, 10005}";
+		//var partyIdArr = partyIdStr.replace(/[(&#123;)\{\}(&#125;)(&#91;)\[\](&#93;)]/g,"").split(", ");
+		var partyIdArr = partyIdStr.replace(/(&#123;)|\{|\}|(&#125;)|(&#91;)|\[|\]|(&#93;)/g,"").split(", ");
+		$("#test1").text(partyIdArr);
+
+    // test2
+    var str = "YT_PORT11";
+    var parten = /^(YT_PORT)(\d)+$/g;
+    if(parten.test(str)){
+      $("#test2").text("匹配成功");
+    }else{
+      $("#test2").text("匹配失败，必须以YT_PORT开始，数字结束");
+    }
+
+    // test3
+    var test3 = "http://www.aezo.cn/hello/abc".match('/^(http:\/\/)|(https:\/\/)/');
+    $("#test3").text(test3);
+
+		// test4
+		var test4Str = "2016-08-02";
+    var test4 = test4Str.match(/(-|\/){1}/);
+		// var test4 = test4Str.match('/^(\d{4})(-|\/)(\d{1,2})\2(\d{1,2})$/');
+    $("#test4").text(test4);
+
+
+	});
+</script>
+
+</body>
+</html>

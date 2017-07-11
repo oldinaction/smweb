@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>Html笔记 - 图片标签 - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			
+		</style>
+
+	</head>
+<body style="background:url(images/bg.png) repeat;">
+	<h1 style="text-align:center;">Html笔记 - 图片标签 - 小易</h1>
+	<!--img 图片标签四要素：src(路径),alt(描述),width(宽度),height(高度)-->
+	<h3>1、有利于SEO优化，最好将这四要素写全</h3>
+	<p>
+		<font color="red">img 图片标签四要素：src(路径)，alt(描述)，width(宽度)，height(高度)</font><br />
+		<img src="images/1.jpg" alt="清纯美女" width="364" height="422" title="清纯美女-原尺寸"/>
+	</p>
+	<font color="red">注：此时的width和height可以不是图片的原始尺寸，若想缩放图片，width和height的值可根据原始尺寸等比缩小</font><br /><br />
+	<img src="images/1.jpg" alt="清纯美女" width="182" height="211" title="清纯美女-缩小版"/>
+
+	<h3>2、背景图片：本页面已采用</h3>
+	<p>
+		&lt;body style="background:url(images/bg.png) no-repeat;"&gt; &lt;/body&gt; &nbsp;&nbsp;&nbsp;&nbsp;url中不用写引号<br />no-repeat(不重复)也可以写成repeat(重复)
+	</p>
+
+	<h3>3、图片链接</h3>
+	<p>
+		如：<br />
+		&lt;a href="http://blog.csdn.net/oldinaction" target="_blank"&gt;<br />
+			&lt;img src="images/blog.png" alt="小易的博客" width="300" height="300"/&gt;<br />
+		&lt;/a&gt;<br /><br />
+		<a href="http://blog.csdn.net/oldinaction" target="_blank">
+			<img src="images/blog.png" alt="小易的博客" width="300" height="300"/>
+		</a>
+	</p>
+
+	<h3>4、图片的路径可以为绝对路径或者相对路径</h3>
+	<p>
+		绝对路径，如：&lt;img src="http://www.baidu.com/img/bdlogo.png"/&gt;<br />
+		<img src="http://www.baidu.com/img/bdlogo.png"/><br /><br />
+		相对路径，如：&lt;img src="images/bdlogo.png"/&gt;<br />
+		<img src="images/bdlogo.png"/> 
+	</p>
+
+	<h3>5、排列图片</h3>
+	<p>
+		<font color="red">属性 align ：bottom 、 middle 、 top</font><br />
+		如：&lt;p&gt;&lt;img src="2.jpg" src="美女" width="586" height="391" align="middle"/&gt;<br />
+		上高数课时，老师见一同学老在打瞌睡，便敲敲他的课桌，示意他站起来回答问题：“甲乙丙丁几个人......” 那兄弟立马回答：“四个人！ ”只见老师拿着手上的书本敲向他的脑袋：“四你妹啊，老子题目都还没念完！你是小学一年级的学生氨 顿时，全班爆笑不止…
+		&lt;/p&gt;<br />
+		<p>
+			<img src="2.jpg" src="美女" width="586" height="391" align="middle"/>
+			上高数课时，老师见一同学老在打瞌睡，便敲敲他的课桌，示意他站起来回答问题：“甲乙丙丁几个人......” 那兄弟立马回答：“四个人！ ”只见老师拿着手上的书本敲向他的脑袋：“四你妹啊，老子题目都还没念完！你是小学一年级的学生氨 顿时，全班爆笑不止…
+		</p>
+	</p>
+
+	<h3>6、图片格式</h3>
+	<p>由上面的例子课看出想jpg、gif、png等格式都可以用的</p>
+	<img src="images/gif.gif"/>
+
+</body>
+</html>
