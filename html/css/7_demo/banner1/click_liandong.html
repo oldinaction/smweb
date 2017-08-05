@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>鼠标点击 - 标题内容联动 - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{
+				font-size: 12px;
+				font-family: "微软雅黑";
+				color: #666;
+			}
+			.all{
+				width: 700px;
+				height: 300px;
+				margin: 200px auto;
+			}
+			.all .title{
+				height: 50px;
+			}
+			.all .title .sel{
+				color: #fff;
+				background: #69F;
+			}
+			.all .title ul{
+				list-style: none;
+			}
+			.all .title ul li{
+				float: left;
+				height: 50px;
+			}
+			.all .title ul li a{
+				display: block;
+				height: 50px;
+				font-size: 16px;
+				text-decoration: none;
+				color: #666;
+				line-height: 50px;
+				padding: 0 15px;
+			}
+			.all .content{
+				display: none; /*先影藏所以*/
+			}
+			.all .rb{
+				display: block; /*显示rb这个内容*/
+				width: 700px;
+				height: 250px;
+				background: #63C;			
+			}
+			.all .hy{
+				width: 700px;
+				height: 250px;
+				background: #633;			
+			}
+			.all .hl{
+				width: 700px;
+				height: 250px;
+				background: #6fC;			
+			}
+			.all .by{
+				width: 700px;
+				height: 250px;
+				background: #f3C;			
+			}
+			.all .jj{
+				width: 700px;
+				height: 250px;
+				background: #fcc;			
+			}
+		</style>
+
+	</head>
+<body>
+<p style="background: #ccc;font-size:16px;">用到了一点简单的jquery来实现联动，注解比较详细，实在不懂等学习完js/juquery再来看<p>
+
+	<div class="all">
+		<div class="title">
+			<ul>
+				<li class="sel"><a href="#">热播大片</a></li>
+				<li><a href="#">华语精选</a></li>
+				<li><a href="#">好莱坞精选</a></li>
+				<li><a href="#">变异人的世界</a></li>
+				<li><a href="#">即将上线</a></li>
+			</ul>
+		</div>
+		<div style="clear:both"></div>
+		<div class="content rb"></div>
+		<div class="content hy"></div>
+		<div class="content hl"></div>
+		<div class="content by"></div>
+		<div class="content jj"></div>
+	</div>
+
+
+
+<!--导入jquery的官方类库-->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	//   $(function(){});  为jquery的入口函数，相当于java中的main函数
+	$(function(){
+		$(".title").find("li a").click(function(){
+			/*
+			1、此时在每个li标签下都只有一个a标签，所以这个a的索引是0
+			2、而此时li标签是有兄弟元素（与之并列的li）的，所以他们的索引分别是 0 1 2 3 4
+			*/
+			$(this).parent().addClass("sel"); // 当鼠标点击a的时候，寻找a的父对象，并给这个父对象添加类样式
+			$(this).parent().siblings().removeClass("sel");//同时把这个父对象的兄弟元素(siblings()获取对象的兄弟元素)的这个样式移除（互斥）
+			// 获取当前点击的a的父对象li的索引(下标)，有5个li标签，所以对应的索引分别是 0 1 2 3 4
+			var _index = $(this).parent().index();
+			//所有的是属于content类的只有5个div，所以对应的索引分别是 0 1 2 3 4
+			$(".content").hide().eq(_index).show();
+		});	
+	});
+	
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>CSS笔记 - background、text、font、table - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<style type="text/css">
+			body{background:url(images/bg.png)}
+
+			.background-color{background-color:#F9C;}
+			.background-image{width:250px;height:200px;background-image:url(images/background.jpg);}
+			.background-repeat{width:300px;height:250px;background-image:url(images/background.jpg);background-repeat:repeat;}
+			.background-position{width:300px;height:200px;border:1px solid red;background-image:url(images/background.jpg);background-repeat:no-repeat;background-position:bottom right;}
+			.color{color:#0F3}
+			.text-overflow{
+				border:1px solid red;
+				/*要想将多余的文本显示未省略号，width、overflow、white-space、text-overflow几个属性都要有*/
+				width:130px;
+				overflow:hidden;
+				white-space:nowrap;
+				text-overflow:ellipsis;
+			}
+
+			.lol{margin:50px auto;width:900px;border:1px solid #666;border-collapse:collapse;font-family:"楷体";text-align:center;line-height:35px;text-transform:capitalize;}
+			.lol .l_menu{font-size:18px;font-weight:bold;line-height:45px;}
+			.lol .l_sm{font-size:18px;font-style:italic;}
+			.lol th{font-size:24px;line-height:50px;border:1px solid #666;}
+			.lol tr td{border:1px solid #666;}
+			.lol tr:hover{background:#6C0;}
+			.lol tr td:hover{background:#C6F;color:#fff;}					
+		</style>
+
+	</head>
+<body>
+	<h1 style="text-align:center;">CSS笔记 - background、text、font、table - 小易</h1>
+	<h4>一、background背景属性</h4>
+	1、背景颜色 background-color:3种颜色值;<br /><br />
+	2、背景图片 background-image:url(); <font color="red">url中的图片路径可以加双引号也可以不加，若是写在内联样式中则要写成单引号或者不写</font><br /><br />
+	3、重复 background-repeat : repeat/no-repeat/repeat-x/repeat-y <font color="red">默认是repeat</font><br /><br />
+	4、位置 background-position:垂直方向位置 水平方向位置（两个位置颠倒也可以实现效果）<br /><br />
+	（1）垂直方向：top center bottom 水平方向：left center right<br /><br />
+	（2）百分比形式<br /><br />
+	（3）像素形式<br /><br />
+	<font color="red">位置是相对容器</font><br /><br />
+	<font color="red">background-position必须要在background-image存在的条件下才能使用</font><br /><br />
+	<font color="red">网页上的小图标一般是通过改变一张大图的位置来显示大图上的小图标</font><br /><br />
+	5、大小 background-size : auto/cover/contain<br /><br />
+	6、简写与标准写法：<font color="red">建议使用简写</font><br /><br />
+	（1）简写 background:url(bg.png) no-repeat top center;<font color="red">每个属性值之间一定要有空格</font><br /><br />
+	（2）标准写法 background-image:url(bg.png);background-repeat:no-repeat;background-position:top center;<br /><br />
+
+	<h4>二、文本</h4>
+	1、文本颜色 color （于backgound-color不同，他只针对文本的颜色）<br /><br />
+	2、字符间距 letter-spacing : 10px/1em;（10px=1em）<br /><br />
+	3、行高 line-height : 20px/150%/2（2代表200%，默认为100%）<br /><br />
+	4、文本对齐(水平方向) text-align:left/center/right<br /><br />
+	（注）垂直方向对齐 : 让line-height的值为容器的的高度（仅适用于文本垂直居中）<br /><br />
+	5、缩进 text-indent：20px（默认为0，即顶格）<br /><br />
+	6、装饰文本 text-decoration 可简写<br /><br />
+	（注）其中常用text-decoration-line : none/underline/overline(上划线)/line-through(贯穿线)/blink(闪烁)<br /><br />
+	7、文本转换 text-transform : capitalize(所有单词首字母大学)/uppercase(大写)/lowercase(小写)<br /><br />
+	8、text-overflow：clip(裁剪)/ellipsis(省略，显示省略号)<br /><br />
+	注：要想将多余的文本显示未省略号，<font color="red">width、overflow:hidden、white-space:nowrap、text-overflow:ellipsis</font>几个属性都要有<br /><br />
+
+
+	<h4>三、字体</h4>
+	1、font-size:12px;（统计表明12px的字体是人们看着最舒服的字体大小）<br /><br />
+	2、font-family : "宋体"/"微软雅黑";<br /><br />
+	3、font-style : none(默认)/italic(斜体)/oblique(倾斜);<br /><br />
+	4、font-weight : normal(400)/bold(粗体 700)/bolder(特粗体 相当b和strong)/lighter(细体)/100~900;<br /><br />
+
+	<h4>四、表格</h4>
+	1、边框 border : 1px solid red; <font color="red">调试常用</font><br /><br />
+	2、去掉折叠边框 border-collapse:collapse;<br /><br />
+	3、文字居中 text-align:center; line-height:30px;<br /><br />
+	4、鼠标停留选中变色 .table tr td:hover{background:#666;}<br /><br />
+
+	<h4>五、实例</h4>
+	<div class="background-color">background-color</div><br />
+	<div class="background-image">background-image:url(images/background.jpg)</div><br />
+	<div class="background-repeat">background-repeat:repeat 默认是repeat</div><br />
+	<div class="background-position">background-position:bottom right</div><br /><br />
+	<p class="text-overflow">后面还有文字哦，O(∩_∩)O哈哈~O(∩_∩)O哈哈~O(∩_∩)O哈哈~O(∩_∩)O哈哈~O(∩_∩)O哈哈~
+
+
+	<h4>六、表格实例</h4>
+	<table class="lol">
+		<th colspan="6">LOL英雄列表</th>
+		<tr class="l_menu">
+			<td>名字</td>
+			<td>位置</td>
+			<td>性别</td>
+			<td>难易程度</td>
+			<td>口头禅</td>
+			<td>说明</td>
+		</tr>
+
+		<tr>
+			<td>流浪</td>
+			<td>中路</td>
+			<td>男</td>
+			<td>简单</td>
+			<td>快走！快走！已经在加油了！</td>
+			<td>技能施放:QWEQ</td>
+		</tr>
+		
+		<tr>
+			<td>寒冰</td>
+			<td>下路</td>
+			<td>女</td>
+			<td>简单</td>
+			<td>明智之选！</td>
+			<td>adc</td>
+		</tr>
+		
+		<tr>
+			<td>盖伦</td>
+			<td>上路、下路</td>
+			<td>男</td>
+			<td>简单</td>
+			<td>德玛西亚万岁!</td>
+			<td>记得蹲草丛哦！</td>
+		</tr>
+		
+		<tr>
+			<td>伊泽瑞尔</td>
+			<td>下路</td>
+			<td>男</td>
+			<td>中</td>
+			<td>是时候表演真正的技术了！</td>
+			<td>英雄联盟中的帅锅！</td>
+		</tr>
+		
+		<tr>
+			<td>狐狸</td>
+			<td>中路</td>
+			<td>女</td>
+			<td>难</td>
+			<td>不记得！</td>
+			<td>太漂亮的东西杀伤力也很大哦！</td>
+		</tr>
+
+		<tr class="l_sm">
+			<td colspan="6">声明：以上观点仅供娱乐，如有错误纯属搞笑！</td>	
+		</tr>
+	</table>
+
+
+</body>
+</html>

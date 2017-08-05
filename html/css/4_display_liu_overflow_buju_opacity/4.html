@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>CSS笔记 - 块级行记元素、display、文档流、overflow、布局、透明 - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+		.block{border:1px solid red;}
+		
+
+		</style>
+
+	</head>
+<body style="background:url(images/bg.png)">
+	<h1 style="text-align:center;">CSS笔记 - 块级行记元素、display、文档流、overflow、布局、透明 - 小易</h1>
+	<h2 style="text-align:center;color:red;">CSS高级知识 - 重要</h2>
+	<h4>一、块级元素</h4>
+	1、<font color="red">块级元素默认占据一行，块级元素中可以加入块级元素和行内元素</font><br /><br />
+	2、常见的块级元素：div、p、h1-h6、ul、ol、dl、table、form、hr(水平分割线)、menu(html5中的属性)<br /><br />
+	3、<font color="red">float可以使两个块级元素处于同一行，但两个元素的总宽度必须小于外部容器的宽度。</font><br /><br />
+	4、clear清除浮动，一般用一个无意义的div实现。<br /><br />
+
+	<h4>二、行内元素</h4>
+	1、<font color="red">行内元素只能容纳文本或者行内元素，不能容纳块级元素。</font>（如：a标签中不能加入div标签）<br /><br />
+	2、常见的行内元素：span、a、img、br、input、textarea、select、label、i(斜体)、u(下划线)、b、strong、em(强调，以斜体显示)、sup、sub、del<br /><br />
+	3、<font color="red">行内元素默认不换行，多个行内元素，只要所有元素的总宽度小于外部容器的宽度，他们就会在同一行显示</font><br /><br />
+	4、可以使用display:block(将行内元素转成块级元素)和&lt;br /&gt;使之换行<br /><br />
+	
+	<h4>三、display</h4>
+	1、display : none/block/inline<br /><br />
+	2、none：此元素不会被显示<br /><br />
+	3、block：显示为块级元素，此元素前后会带有换行符<br /><br />
+	4、inline：此元素会被显示为行内(内联)元素，元素前后没有换行符<br /><br />
+	5、inline-block：指定对象为内联块元素<br /><br />
+
+	<h4>四、文档流</h4>
+	1、将窗体自上而下分成一行行, 并在每行中按从左至右的顺序排放元素,即为文档流<br /><br />
+	2、CSS的定位机制有3种：普通流、浮动和定位<br /><br />
+	3、定位(position)：<br /><br />
+	（1）Static：保持文档流<br /><br />
+	（2）Relative：相对本身的原始位置发生位移且<font color="red">保持文档流，占空间</font><br /><br />
+	（3）Absolute：脱离文档流，<font color="red">不占空间</font>且相对于其包含块来定位<br /><br />
+	4、浮动(float)：脱离文档流，<font color="red">不占空间</font><br /><br />
+
+	<h4>五、overflow溢出</h4>
+	1、overflow : visible(可见，不做更改)/<font color="red">hidden</font>(隐藏)/scroll(水平垂直都显示滚动条)/<font color="red">auto</font>(如果溢出，只在溢出的方向显示滚动条)<br /><br />
+	2、overflow规定当内容溢出元素框时发生的事情<br /><br />
+
+	<h4>六、布局</h4>
+	1、两列布局<br /><br />
+	（1）<font color="red">两列自适应宽度：可以用%形式；两列固定宽度：用像素px形式</font><br /><br />
+	（2）由于div为块状元素，默认情况下占据一行的空间，要想让下面的div跑到右侧就需要做助css的浮动(float)来实现<br /><br />
+	（3）两列固定宽度居中<font color="red">（在两个div之外再加一个父div，再使用margin:0 auto;）</font><br /><br />
+	2、三列布局<br /><br />
+	（1）<font color="red">三列自适应宽度：div顺序 <b>左</b>(左浮动，固定宽度) <b>右</b>(右浮动，固定宽度) <b>中</b>(不指定浮动和宽度，并加上外左右边距，外边距大小比左右div的宽度略大)</font><br /><br />
+	（2）三列固定宽度 <br /><br />
+	（3）三列固定宽度居中（在三个div之外再加一个父div）<br /><br />
+	<font color="red">3、注意</font><br /><br />
+	（1）居中对齐(margin:0 auto;)，<font color="red">必须给定确切的px宽度</font>，高度无要求。（宽度不能为%形式）<br /><br />
+	（2）使用float时，<font color="red">指定元素宽度</font>有利于解决浏览器兼容问题<br /><br />
+	（3）使用绝对定位，每个元素必须为<font color="red">块级元素</font>，若不是可以变成为块级元素<br /><br />
+	（4）例子：span相对于a(为一个图片链接)，处于a的左下侧。<font color="red">此时a为relative，span为absolute（span相对于a绝对定位）</font><br />
+	<pre>
+		&lt;a style="position:relative"&gt;
+			&lt;img /&gt;
+			&lt;span style="position:absolute"&gt;&lt;/span&gt;
+		&lt;/a&gt;	
+	</pre>
+
+	<h4>七、透明opacity</h4>
+	（1）值被约束在[0.0-1.0]范围。opacity:1 显示时无效果；opacity:0 此元素显示了但是看不见<br /><br />
+	（2）未加此属性时，默认opacity:1<br /><br />
+	（3）如：<font color="red">opacity:0.9;filter:alpha(opacity=90);</font><br /><br />
+	（4）<font color="red">background:rgba(0,0,0,0.4);可时背景透明，但是文字不产生透明效果，0.4可以适当调整。</font>
+
+	<h4>示例</h4>
+	<h5>1、块级元素</h5>
+	代码如下：<br />
+	<pre>&lt;hr/&gt;</pre>
+	效果：<br />
+	<hr/>
+
+	<h5>2、行内元素(默认在一行显示)</h5>
+	代码如下：<br />
+	<pre>
+		&lt;input type="text"/&gt;
+		&lt;textarea rows="3" cols="15"&gt;&lt;/textarea&gt;
+		&lt;select&gt;
+			&lt;option&gt;1&lt;/option&gt;
+			&lt;option&gt;2&lt;/option&gt;
+		&lt;/select&gt;
+		2&lt;sup&gt;3&lt;/sup&gt;=8
+		c+o&lt;sub&gt;2&lt;/sub&gt;=co&lt;sub&gt;2&lt;/sub&gt;
+		&lt;i&gt;i：斜体&lt;/i&gt;
+		&lt;u&gt;u：下划线&lt;/u&gt;
+		&lt;em&gt;em：强调，以斜体显示&lt;/em&gt;
+	</pre>
+	效果：<br />
+	<input type="text"/>
+	<textarea rows="3" cols="15"></textarea>
+	<select>
+		<option>1</option>
+		<option>2</option>
+	</select>
+	2<sup>3</sup>=8
+	c+o<sub>2</sub>=co<sub>2</sub>
+	<i>i：斜体</i>
+	<u>u：下划线</u>
+	<em>em：强调，以斜体显示</em>
+	
+	
+	<h5>3、display</h5>
+	display:block;<br /><br />
+	源代码：<br /><br />
+	<pre>
+		转换前：&lt;br /&gt;
+		&lt;a style="border:1px solid green" href="#"&gt;a标签未转换成块级元素&lt;/a&gt;
+		&lt;span style="border:1px solid #fff"&gt;注意我(span)的位置&lt;/span&gt;
+		&lt;br /&gt;&lt;br /&gt;
+		转换后：&lt;br /&gt;
+		&lt;a style="display:block;border:1px solid red" href="#"&gt;a标签未转换成块级元素&lt;/a&gt;
+		&lt;span style="border:1px solid #fff">注意我(span)的位置&lt;/span&gt;
+	</pre>
+	效果：<br /><br />
+	转换前：<br />
+	<a style="border:1px solid green" href="#">a标签未转换成块级元素</a>
+	<span style="border:1px solid #fff">注意我(span)的位置</span>
+	<br /><br />
+	转换后：<br />
+	<a style="display:block;border:1px solid red" href="#">a标签未转换成块级元素</a>
+	<span style="border:1px solid #fff">注意我(span)的位置</span>
+	
+	<br /><br />
+	display:inline-block;<br /><br />
+	源代码：<br /><br />
+	<pre>
+		&lt;span style="background:#000;color:#fff;display:block;"&gt;我是span标签，我已经转变成了块状元素&lt;/span&gt;
+		&lt;span style="background:#000;color:#fff;display:inline-block;"&gt;我是span标签，我已经转变成了内联块元素&lt;/span&gt;
+	</pre>
+	效果：<br /><br />
+	<span style="background:#000;color:#fff;display:block;">我是span标签，我已经转变成了块状元素</span>
+	<span style="background:#000;color:#fff;display:inline-block;">我是span标签，我已经转变成了内联块元素</span>
+
+	<h5>4、溢出overflow : visible/hidden/scroll/auto</h5>
+	源代码：<br /><br />
+	<pre>
+		没加overflow
+		&lt;p style="width:500px;height:45px;border:1px solid red;"&gt;下面的文字，此处省略&lt;/p&gt;
+		&lt;br /&gt;
+		overflow:hidden;
+		&lt;p style="width:500px;height:45px;border:1px solid red;overflow:hidden;"&gt;下面的文字，此处省略&lt;/p&gt;
+		&lt;br /&gt;
+		overflow:scroll;
+		&lt;p style="width:500px;height:45px;border:1px solid red;overflow:scroll;"&gt;下面的文字，此处省略&lt;/p&gt;
+		&lt;br /&gt;
+		overflow:auto;
+		&lt;p style="width:500px;height:45px;border:1px solid red;overflow:auto;"&gt;下面的文字，此处省略&lt;/p&gt;
+	</pre>
+
+	效果：<br /><br />
+	没加overflow
+	<p style="width:500px;height:45px;border:1px solid red;">em标签告诉浏览器把其中的文本表示为强调的内容。对于所有浏览器来说，这意味着要把这段文字用斜体来显示。在文本中加入强调也需要有技巧。如果强调太多，有些重要的短语就会被漏掉；如果强调太少，就无法真正突出重要的部分。这与调味品一样，最好还是不要滥用强调。
+	</p>
+	<br />
+	overflow:hidden;
+	<p style="width:500px;height:45px;border:1px solid red;overflow:hidden;">em标签告诉浏览器把其中的文本表示为强调的内容。对于所有浏览器来说，这意味着要把这段文字用斜体来显示。在文本中加入强调也需要有技巧。如果强调太多，有些重要的短语就会被漏掉；如果强调太少，就无法真正突出重要的部分。这与调味品一样，最好还是不要滥用强调。
+	</p>
+	<br />
+	overflow:scroll;
+	<p style="width:500px;height:45px;border:1px solid red;overflow:scroll;">em标签告诉浏览器把其中的文本表示为强调的内容。对于所有浏览器来说，这意味着要把这段文字用斜体来显示。在文本中加入强调也需要有技巧。如果强调太多，有些重要的短语就会被漏掉；如果强调太少，就无法真正突出重要的部分。这与调味品一样，最好还是不要滥用强调。
+	</p>
+	<br />
+	overflow:auto;
+	<p style="width:500px;height:45px;border:1px solid red;overflow:auto;">em标签告诉浏览器把其中的文本表示为强调的内容。对于所有浏览器来说，这意味着要把这段文字用斜体来显示。在文本中加入强调也需要有技巧。如果强调太多，有些重要的短语就会被漏掉；如果强调太少，就无法真正突出重要的部分。这与调味品一样，最好还是不要滥用强调。
+	</p>
+
+	<h5>5、透明opacity</h5>
+	源代码：<br /><br />
+	<pre>
+		&lt;b style="border:1px solid red;"&gt;加粗，且未加透明，此时默认opacity:1&lt;/b&gt;
+		&lt;br /&gt;
+		&lt;b style="border:1px solid red;opacity:1"&gt;加粗，opacity:1&lt;/b&gt;
+		&lt;br /&gt;
+		&lt;b style="border:1px solid red;opacity:0.5"&gt;加粗，opacity:0.5&lt;/b&gt;
+		&lt;br /&gt;
+		&lt;b style="border:1px solid red;opacity:0&gt;加粗，opacity:0(此时显示了但是看不见)&lt;/b&gt;
+	</pre>
+
+	效果：<br /><br />
+	<b style="border:1px solid red;">加粗，且未加透明，此时默认opacity:1</b>
+	<br />
+	<b style="border:1px solid red;opacity:1">加粗，opacity:1</b>
+	<br />
+	<b style="border:1px solid red;opacity:0.5;">加粗，opacity:0.5，文字也透明了</b>
+	<br />
+	<b style="border:1px solid red;opacity:0">加粗，opacity:0(此时显示了但是看不见)</b>
+	<div style="background:rgba(0,0,0,0.4);">
+		<p style="color:#fff;">背景透明，文字不产生透明效果</p>
+	</div>
+
+	<h5>6、布局</h5>
+	源代码：<br /><br />
+	<pre>
+		（1）两列自适应宽度：使用%形式&lt;br /&gt;&lt;br /&gt;
+		&lt;div style="width:40%;height:40px;background:#F0F;float:left;"&gt;两列自适应宽度：使用%形式，两个都加float&lt;/div&gt;
+		&lt;div style="width:60%;height:50px;background:#9F6;float:left;"&gt;两列自适应宽度：使用%形式，两个都加float&lt;/div&gt;
+		（2）两列固定宽度：使用px形式&lt;br /&gt;&lt;br /&gt;
+		&lt;div style="width:300px;height:40px;background:#F0F;float:left;"&gt;两列固定宽度：使用px形式&lt;/div&gt;
+		&lt;div style="width:500px;height:50px;background:#9F6;float:left;"&gt;两列固定宽度：使用px形式&lt;/div&gt;
+		&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+		（3）两列固定宽度居中：在两个div之外再加一个父div，再使用margin:0 auto;&lt;br /&gt;&lt;br /&gt;
+		&lt;div style="width:800px;margin:0 auto;"&gt; &lt;!--此时要指明外部div的宽度才能使用margin居中--&gt;
+			&lt;div style="width:300px;height:40px;background:#F0F;float:left;"&gt;两列固定宽度居中：在两个div之外再加一个父div，再使用margin:0 auto;&lt;/div&gt;
+			&lt;div style="width:500px;height:50px;background:#9F6;float:left;"&gt;两列固定宽度居中：在两个div之外再加一个父div，再使用margin:0 auto;&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+		（4）<font color="red">三列自适应宽度：div顺序 &lt;b&gt;左&lt;/b&gt;(左浮动，固定宽度) &lt;b&gt;右&lt;/b&gt;(右浮动，固定宽度) &lt;b&gt;中&lt;/b&gt;(不指定浮动和宽度，并加上外左右边距，外边距大小比左右div的宽度略大)</font>
+		&lt;div style="width:200px;background:#eee;border:1px dotted red;float:left;"&gt;左侧div，width:200px;float:left;&lt;/div&gt;	
+		&lt;div style="width:200px;background:#eee;border:1px dotted red;float:right;"&gt;右侧div，width:200px;float:right;&lt;/div&gt;
+		&lt;div style="background:#9FC;border:1px dotted red;margin: 0 210px;"&gt;中间div，不指定width和float属性，margin: 0 210px;&lt;/div&gt;
+	</pre>
+
+	效果：<br /><br />
+	（1）两列自适应宽度：使用%形式<br /><br />
+	<div style="width:40%;height:40px;background:#F0F;float:left;">两列自适应宽度：使用%形式，两个都加float</div>
+	<div style="width:60%;height:50px;background:#9F6;float:left;">两列自适应宽度：使用%形式，两个都加float</div>
+	（2）两列固定宽度：使用px形式<br /><br />
+	<div style="width:300px;height:40px;background:#F0F;float:left;">两列固定宽度：使用px形式</div>
+	<div style="width:500px;height:50px;background:#9F6;float:left;">两列固定宽度：使用px形式</div>
+	<br /><br /><br />
+	（3）两列固定宽度居中：在两个div之外再加一个父div，再使用margin:0 auto;<br /><br />
+	<div style="width:800px;margin:0 auto;"> <!--此时要指明外部div的宽度才能使用margin居中-->
+		<div style="width:300px;height:40px;background:#F0F;float:left;">两列固定宽度居中：在两个div之外再加一个父div，再使用margin:0 auto;</div>
+		<div style="width:500px;height:50px;background:#9F6;float:left;">两列固定宽度居中：在两个div之外再加一个父div，再使用margin:0 auto;</div>
+	</div>
+	<br /><br /><br />
+	（4）<font color="red">三列自适应宽度：div顺序 <b>左</b>(左浮动，固定宽度) <b>右</b>(右浮动，固定宽度) <b>中</b>(不指定浮动和宽度，并加上外左右边距，外边距大小比左右div的宽度略大)</font><br /><br />
+	<div style="width:200px;background:#eee;border:1px dotted red;float:left;">左侧div，width:200px;float:left;</div>	
+	<div style="width:200px;background:#eee;border:1px dotted red;float:right;">右侧div，width:200px;float:right;</div>
+	<div style="background:#9FC;border:1px dotted red;margin: 0 210px;">中间div，不指定width和float属性，margin: 0 210px;</div>
+
+</body>
+</html>

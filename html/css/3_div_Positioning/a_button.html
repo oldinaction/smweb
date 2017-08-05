@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>a标签按钮</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+		/*常规按钮*/
+		.btn{
+			display:block;
+			width:200px;
+			height:50px;
+			background-color:#ff9a00;
+			margin:20px auto;
+			text-align:center;
+			line-height:50px;
+			text-decoration:none;
+			color:#fff;
+			font-weight:bold;
+			letter-spacing:2px;
+			border-radius:5px;/*设置圆角*/
+		}
+		.btn:hover{background-color:#ccc;}
+		
+		/*圆形按钮*/
+		.btn_circle{
+			display:block;
+			width:100px;/*宽高相等*/
+			height:100px;
+			background-color:#51aded;
+			margin:20px 100px;
+			text-align:center;
+			line-height:100px;
+			text-decoration:none;
+			color:#fff;
+			font-weight:bold;
+			letter-spacing:2px;
+			border-radius:50px;/*为宽高的一半*/
+		}
+		.btn_circle:hover{background-color:#ccc;}
+
+		/*椭圆按钮*/
+		.btn_tuoyuan{
+			display:block;
+			width:200px;
+			height:50px;
+			background:#90C;
+			text-align:center;
+			line-height:50px;
+			color:#fff;
+			font-weight:bold;
+			text-decoration:none;
+			border-radius:30px;
+		}
+		.btn_tuoyuan:hover{background:#ccc;}
+
+		/*矩形按钮*/
+		.btn_juxing{
+			display:block;
+			width:200px;
+			height:150px;
+			background:#0F3;
+			text-align:center;
+			line-height:150px;
+			color:#fff;
+			font-weight:bold;
+			text-decoration:none;
+		}
+		.btn_juxing:hover{background:#ccc;}
+
+			
+		</style>
+
+	</head>
+<body>
+	<h2>a标签按钮</h2>
+	<a class="btn" href="http://blog.csdn.net/oldinaction" target="show">我的博客</a><br />
+	<a class="btn_circle" href="http://weibo.com/oldinaction" target="show">我的微博</a><br />
+	<a class="btn_tuoyuan" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=5IuIgI2KhYeQjYuKpJWVyoeLiQ" target="show">我的邮箱</a><br />
+	<a class="btn_juxing" href="http://weibo.com/oldinaction" target="show">我的简介</a><br />
+
+</body>
+</html>

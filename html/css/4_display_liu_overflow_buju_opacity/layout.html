@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>图片布局</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+			body{font-size:12px;font-family:"微软雅黑";color:#666;}
+			img{
+				border:0;
+			}
+			.both{
+				width: 591px;
+				margin: 100px auto;			
+			}
+			.both .left{
+				width: 210px;
+				height: 288px;
+				float:left;
+				margin:1px;
+			}
+			.both .right{
+				width: 379px;
+				float:right;
+				
+			}
+			.both .right .r1{
+				width: 251px;
+				height: 143px;
+				float:left;
+				margin:1px;
+			}
+			.both .right .r2{
+				width: 124px;
+				height: 143px;
+				float:left;
+				margin:1px;
+			}
+			.both .right .r3{
+				width: 124px;
+				height: 143px;
+				float:left;
+				margin:1px;
+			}
+			.both .right .r4{
+				width: 251px;
+				height: 143px;
+				float:left;
+				margin:1px;
+			}
+			.both a{
+				text-decoration:none;
+				display:block;
+				position: relative;
+			}
+			.both a span{
+				display:inline-block;
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+				background:#000;
+				color:#fff;
+				padding: 4px 15px;
+				border-radius: 15px;
+				opacity:0.7;
+			}
+			.both a:hover img{
+				opacity:0.8;
+			}
+			.both a:hover span{
+				opacity:1;
+			}
+
+		</style>
+
+	</head>
+<body>
+	<h2>图片布局</h2>
+
+	<div class="both">
+		<div class="left">
+			<a href="#">
+				<img src="images/1.jpg" alt="" width="210" height="288"/><!--等比缩放图片，图片原始宽高为29*362-->
+				<span>三亚</span>
+			</a>
+			
+		</div>
+		<div class="right">
+			<div class="r1">
+				<a href="#">
+					<img src="images/2.jpg" alt="" width="251" height="143"/>
+					<span>台湾</span>
+				</a>
+			</div>
+			<div class="r2">
+				<a href="#">
+					<img src="images/3.jpg" alt="" width="124" height="143"/>
+					<span>普吉岛</span>
+				</a>				
+			</div>
+			<div class="r3">
+				<a href="#">
+					<img src="images/4.jpg" alt="" width="124" height="143"/>
+					<span>日本东京</span>
+				</a>
+			</div>
+			<div class="r4">
+				<a href="#">
+					<img src="images/5.jpg" alt="" width="251" height="143"/>
+					<span>小清新鼓浪屿</span>
+				</a>
+			</div>			
+		</div>
+	</div>
+
+</body>
+</html>

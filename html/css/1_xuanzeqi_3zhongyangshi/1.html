@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>CSS笔记 - 选择器、3种样式、基本属性 - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+		
+		<!--外部样式-->
+		<link type="text/css" rel="stylesheet" href="css/1.css"></link>
+		
+		<!--内部样式-->
+		<style type="text/css">
+			/* *{margin:0;padding:0;} */
+			.class{background:#FF0066;width:200px;height:50px;margin:50px auto;} /*类选择器*/
+			#id{background:#390;} /*id选择器*/
+			body{background:url(images/bg.png) repeat;} /*标记选择器*/
+			p b{background:red;} /*派生选择器*/
+			h2,h3{background:#3333FF} /*选择器分组*/
+
+			.lei{font-size:30px;}
+		</style>
+
+	</head>
+<body>
+	<h1 style="text-align:center;">CSS笔记 - 选择器、3种样式、基本属性 - 小易</h1>
+	<h4>一、css注意事项</h4>
+	1、格式：选择器{属性名:属性值;}&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">注意后面的分号</font><br /><br />
+	2、css不区分大小写，但变量名是区分大小写的，建议全部使用小写<br /><br />
+	3、属性和值之间的空格不影响效果<br /><br />
+	4、颜色的几种形式：<br /><br />
+	（1）background:#9900CC;（十六进制）<br /><br />
+	（2）background:#90C;（css样式的缩写形式）<br /><br />
+	（3）background:red/green/yellow/blue ...;（纯英文单词）<br /><br />
+	（4）background:rgb(255, 162, 0);<br /><br />
+
+	<h4>二、css选择器</h4>
+	1、类选择器： .类名{}<br /><br />
+	2、id选择器： #id名{}<br /><br />
+	3、标记选择器，如： body{}<br /><br />
+	4、派生选择器，如： p b{}<br /><br />
+	5、选择器分组，如： h1,h2,h3,h4,h5,h6{}<br /><br />
+
+	<h4>三、css样式</h4>
+	1、外部样式：<br /><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;Link样式表：&lt;link type="text/css" rel="stylesheet" href="css.css"&gt;&lt;/link&gt;<br /><br />
+	&nbsp;&nbsp;&nbsp;&nbsp;Html式：&lt;style type="text/css"&gt;@import url("css.css");&lt;/style&gt;<br /><br />
+	2、内部样式：&lt;style&gt;选择器1{} 选择器2{}&lt;/style&gt;<br /><br />
+	3、内联样式，如：&lt;div style="属性名1:值;属性名2:值"&gt;&lt;/div&gt;<font color="red">&nbsp;&nbsp;多个属性之间用分号隔开，最后一个没有分号，并用引号包裹</font><br /><br />
+	<font color="red">优先级：内联样式 > 内部样式 > 外部样式</font><br /><br />
+
+	<h4>四、基本属性</h4>
+	1、width height：可取值px、%、em（如：body的100%表示占浏览器全屏）
+	2、position:absolute/relative 定位（不同于background-position）
+	3、display:block/inline/none 显示为块状或行记元素
+	4、color：仅指指文字的颜色（不同于background-color）
+	5、top right bottom left：当元素有定位时，可使用这几个属性确定元素位置
+
+	<h4>五、示例：</h4>
+	<div class="class">类选择器效果 - div盒子效果</div>
+	<div id="id">id选择器效果</div>
+	<p><b>派生选择器效果</b></p>
+	<h2>选择器分组2</h2>
+	<h3>选择器分组3</h3>
+	
+	<div class="wai">外部样式</div>
+	<div class="lei">内部样式</div>
+	<div style="font-size:20px">内联样式</div>
+
+</body>
+</html>

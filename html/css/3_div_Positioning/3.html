@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+	<head>
+		<!--声明当前页面的编码集：charset=gbk,gb2312(中文编码)，utf-8国际编码-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!--当前页面的三要素-->
+		<title>CSS笔记 - Div盒子概念、定位 - 小易</title>
+		<meta name="Keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<!--css,js-->
+		<style type="text/css">
+		body{background:url(images/bg.png);}
+		.div-all{width:200px;height:100px;}
+
+		/*1、margin*/
+		.margin-1{border:1px solid red;margin:20px;}
+		.margin-2{border:1px solid red;margin:30px auto;}
+		.margin-top{border:1px solid red;margin-top:50px;}
+		.margin-right{width:800px;border:1px solid red;float:right;margin-right:50px;}
+		.margin-bottom{border:1px solid red;margin-bottom:50px;} 
+		.margin-left{border:1px solid red;margin-left:50px;} 
+		
+		/*2、border*/
+		.dashed{border-style:dashed;}
+		.solid{border-style:solid;}
+		.groove{border-style:groove;}
+		.outset{border-style:outset;}
+		.radius{border-style:solid;border-radius:10px;}
+
+		/*定位*/
+		.position-a{width:100px;height:50px;background:#F9F;
+			
+		}
+		.position-b{width:120px;height:70px;background:#9FF;
+			position:absolute;/*相对于body*/
+			right:50px;
+		}
+
+		.position-c{width:140px;height:90px;background:#F9F;
+			
+		}
+		.position-d{width:100px;height:50px;background:#9FF;
+			position:relative; /*此时d的上一层c没有绝对定位，d还是相对于c进行了相对定位*/
+			top:10px;
+		}
+
+		.position-e{width:160px;height:110px;background:#F9F;
+			position:absolute;/*相对于body*/
+			left:500px;
+		}
+		.position-f{width:100px;height:50px;background:#9FF;
+			position:relative;
+			right:10px; /*相对于position-e，右侧有10px*/
+		}
+
+		.position-e1{width:180px;height:130px;background:#F9F;
+			position:absolute;
+			right:30px;
+		}
+		.position-f1{width:100px;height:50px;background:#9FF;
+			float:right;
+			position:relative;
+			right:10px;
+		}
+
+		.position-g{width:160px;height:110px;background:#F9F;
+			position:absolute;/*相对于body*/
+			left:200px;
+		}
+		.position-h{width:100px;height:50px;background:#9FF;
+			position:absolute;
+			right:10px; /*此时不是相对于body，而是相对于position-g，右侧有10px*/
+		}
+		
+		/*浮动和清除浮动*/
+		.float1{float:right;background:#eee;}
+		.float2{background:#ddd;}
+
+		.float3{float:right;background:#eee;}
+		.float4{clear:right;background:#ddd;}
+			
+		</style>
+
+	</head>
+<body>
+	<h1 style="text-align:center;">CSS笔记 - Div盒子概念、定位 - 小易</h1>
+	<h4>一、盒子简介</h4>
+	1、盒子图形：<br />
+	<img src="images/div.png" alt="div盒子"/><br />
+	2、内边距、边框和外边距都是可选的，默认值是零；<br /><br />
+	3、margin 和 padding 设置为零来覆盖所有浏览器样式，解决浏览器兼容性；<font color="red">*{ margin:0;padding:0;}</font><br /><br />
+	4、增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸；<font color="red">添加了margin、 padding和border后，若想保持原盒子尺寸不变，可在盒子的总尺寸上减去增加的margin、 padding和border的值</font><br /><br />
+	5、padding : 内边距，也有称为填充；margin : 外边距，也有称为空白或空白边 ;<br /><br />
+
+	<h4>二、margin 和 padding</h4>
+	1、margin-top、margin-right、margin-bottom、margin-left分别代表上右下左；padding同样如此<br /><br />
+	2、书写方式(padding同样如此) <br /><br />
+	（1）四周 margin:20px; 指四周的margin都是20px<br /><br />
+	（2）垂直 水平 margin:10px 20px; 指margin的上下为10px，左右为20px <font color="red">水平居中 margin:10px auto;</font><br /><br />
+	（3）上 右 下 左 margin:5px 10px 15px 20px; 指margin的上 右 下 左的距离为5px 10px 15px 20px<br /><br />
+	（4）上 左右 下 margin:5px auto 15px; 指上 下的距离为5px 15px，左右居中<br /><br />
+	3、<font color="red">padding不能为负值；</font>margin可以为像素、百分比、甚至负值<br /><br />
+	4、外边距合并<font color="red">当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者</font><br /><br />
+
+	<h4>三、border边框</h4>
+	1、边框宽度 border-width:1px;<br /><br />
+	2、边框风格 border-style : none(无轮廓)/hidden(隐藏边框)/dotted(点状轮廓)/dashed(虚线轮廓)/ solid(实线轮廓)/double(双线轮廓)/groove(3D凹槽轮廓)/ridge(3D凸槽轮廓)/ inset(3D凹边轮廓)/ outset(3D凸边轮廓)<br /><br />
+	3、边框颜色 border-color<br /><br />
+	4、图片边框 border-image<br /><br />
+	5、<font color="red">边框圆角 border-radius:8px;</font><br /><br />
+	6、简写 border:1px solid red; <font color="red">（调试常用）</font>
+
+	<h4>四、定位简介</h4>
+	1、块级元素: div、h1或p元素 即：显示为一块内容称之为 “块框“ <br /><br />
+	2、行内元素: span,strong,a等元素 即：内容显示在行中称 "行内框"<br /><br />
+	3、使用display属性改变成框的类型 即：<font color="red">display:block;让行内元素设置为块级元素 display:none;没有框</font><br /><br />
+	4、<font color="red">通过width、height可以改变其宽高的就是块级元素</font><br /><br />
+
+	<h4>五、相对定位(relative)和绝对定位(absolute)</h4>
+	1、position:relative; 如果对一个元素进行相对定位，它将出现在它所在的位置上。通过设置垂直或水平位置，让这个元素“相对于”它的起点进行移动（如：示例C-D）<br /><br />
+	2、position:absolute; 元素的位置相对于最近的已定位祖先元素，如果元素没有已定位的祖先元素，它的位置相对于最初的包含块（如：示例B、G-H）<br /><br />
+	3、<font color="red">一般absolute和relative联合使用</font>（如：示例E-F）<br /><br />
+
+	<h4>六、浮动float</h4>
+	1、float : none/left/right 属性定义元素在哪个方向浮动，在CSS中，任何元素都可以浮动；<br /><br />
+	2、清除所有浮动 clear : none(允许两边都可以有浮动对象)/both(不允许有浮动对象)/left(不允许左边有浮动对象)/right(不允许右边有浮动对象)<br /><br />
+	3、对于某个元素清除浮动时，原来已经浮动的元素任然浮动显示；而这个元素则忽视原来浮动的元素，他会以没有浮动的方式排列重新排列
+
+
+	<h4>七、示例</h4>
+	<h5>1、margin(padding同样如此)</h5>
+	<h6>margin:四周</h6>
+	<div class="div-all margin-1">margin:20px;</div>
+	<h6>margin:垂直 水平</h6>
+	<div class="div-all margin-2">margin:30px auto;</div>
+	<h6>margin-top</h6>
+	<div class="div-all margin-top">margin-top:50px;</div>
+	<h6>margin-right</h6>
+	<div class="div-all margin-right">.margin-right{float:right;margin-right:50px;}<font color="red">默认是向左浮动，所以必须改为向右浮动才能实现margin-right的效果</font></div>
+	<h6>margin-bottom</h6>
+	<div class="div-all margin-bottom">margin-bottom:50px;</div>
+	<h6>margin-left</h6>
+	<div class="div-all margin-left">margin-left:50px;</div>
+
+	<h5>2、border边框</h5>
+	<h6>虚线轮廓border-style:dashed</h6>
+	<div class="div-all dashed">border-style:dashed</div>
+	<h6>实线轮廓border-style:solid</h6>
+	<div class="div-all solid">border-style:solid</div>
+	<h6>3D凹槽轮廓border-style:groove</h6>
+	<div class="div-all groove">border-style:groove</div>
+	<h6>3D凸边轮廓border-style:outset</h6>
+	<div class="div-all outset">border-style:outset</div>
+	<h6>圆角border-radius</h6>
+	<div class="div-all radius">border-radius:10px;</div>
+
+
+	<h5>3、定位</h5>
+	<div style="height:2px; width:1200px; border:5px red solid"></div>
+	<div class="position-a">A</div>
+	<div class="position-b">B:absolute</div>
+	<div style="height:2px; width:1200px; border:5px blue solid"></div>
+	
+	<div class="position-c">
+		<div class="position-d">C-D D:relative</div>
+	</div>
+	<div style="height:2px; width:1200px; border:5px black solid"></div>
+
+	<div class="position-e">
+		<div class="position-f">E-F E:absolute F:relative</div>
+	</div>
+	<div style="height:2px; width:1200px; border:5px red solid"></div>
+
+	<div class="position-e1">
+		<div class="position-f1">E1-F1<font color="red">使用了浮动</font></div>
+	</div>
+	<div style="height:2px; width:1200px; border:5px blue solid"></div>
+
+	<div class="position-g">
+		<div class="position-h">G-H G:absolute H:absolute</div>
+	</div>
+
+	<div style="height:100px;"></div>
+	<h5>4、浮动和清除浮动</h5>
+	<div class="float1">float1右浮动</div>
+	<div class="float2">float2未清除浮动</div>
+
+	<div class="float3">float3右浮动</div>
+	<div class="float4">float4清除右浮动</div>
+
+
+</body>
+</html>
