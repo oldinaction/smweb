@@ -4,10 +4,12 @@
 
 - [官方Doc (v2.0)](http://cn.vuejs.org/v2/guide/)
 - 工具介绍
-    - `vue-cli` vue脚手架：可通过npm安装，主要用于快速构建项目基本框架
+    - `vue-cli` vue脚手架：可通过npm安装，主要用于快速构建项目基本框架(v2.8.1 -> B01/B02/D01/D02)
     - `vue-devtools` vue调试工具，可在chrome商店下载安装此浏览器插件
 
 ## 笔记
+
+### 语法
 
 - 表单控件修饰符：`.lazy`、`.number`、`.trim`
 - 组件
@@ -17,21 +19,32 @@
         - `<comp some-prop="1"></comp>`传递给子组件的是字符串、`<comp v-bind:some-prop="1"></comp>`传递的是number类型
     - [属性Prop为单向数据流](http://cn.vuejs.org/v2/guide/components.html#单向数据流)
         - prop 是单向绑定的：当父组件的属性变化时，将传导给子组件，但是不会反过来
+		
+### vue打包app
 
+> 使用vue-cli(v2.8.2)构建的项目，修改`config/index.js`(webpack.config.js)中`build.assetsPublicPath='./'`.(vue-cli v2.8.1未构建成功)
+
+- 使用Hbuilder(方便)
+	- cmd到开发路径下执行npm run build命令，生成dist文件夹
+	- 新建App项目, 并将dist目录下的文件复制到app根目录
+	- 项目名称右键-发行-发行为原生安装包。等待远程打包下载即可
+- 使用cordova打包(需要安装android SDK)
+	- 文档地址[http://cordova.apache.org/docs/en/latest/guide/cli/index.html](http://cordova.apache.org/docs/en/latest/guide/cli/index.html)
+	- 其中运行`cordova requirements`会报android target未安装(本身是安装了需要生成应用对应API版本的sdk, 所需模板版本api版本查看：`platforms/android/project.properties`，如：target=android-25)
+	
 ## 示例
 
-- [A01-helloworld](https://oldinaction.github.io/smweb/vuejs/A01-helloworld/)
+- [A01-helloworld](https://oldinaction.github.io/smweb/vuejs/A01-helloworld/demo1.html)
     - 无需安装任何依赖，只需要将vue.js引入到html文件中即可
-
-## 进阶
-
 - B01-vuecli-webpack 使用vue-cli工具，初始化一个基于webpack模板的项目
 
     ```shell
     # 全局安装 vue-cli (vue脚手架：可初始化一个基本vue项目)
     $ npm install --global vue-cli
-    # 在当前目录创建一个基于 webpack 模板的项目
+	# 创建项目(vue-cli v2.8.2)
     $ vue init webpack-simple
+    # 在当前目录创建一个基于 webpack 模板的项目(vue-cli v2.8.1)
+    # $ vue init webpack-simple
     # 安装依赖，走你 (根据初始化的package.json安装)
     $ npm install
     # 启动服务器
@@ -42,7 +55,7 @@
 
 - [D01-github-commit](https://oldinaction.github.io/smweb/vuejs/D01-github-commit/)
     - 基于github提供的api，展示项目提交详情 (生命周期钩子、计算属性、观测、过滤器、ajax)
-- D02-work-element[github](https://github.com/oldinaction/smweb/tree/master/vuejs/D02-work-element)
+- [D02-work-element](https://oldinaction.github.io/smweb/vuejs/D01-github-commit/dist/) [github](https://github.com/oldinaction/smweb/tree/master/vuejs/D02-work-element)
 
     ![工作清单预览](D02-work-element/work-element.png)
 

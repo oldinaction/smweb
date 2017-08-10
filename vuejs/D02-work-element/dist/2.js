@@ -1,0 +1,2 @@
+webpackJsonp([2],{213:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={}},220:function(e,t){e.exports={render:function(){var e=this,t=e.$createElement;e._self._c;return e._m(0)},staticRenderFns:[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("p",[e._v("我是子组件")])])}]}},94:function(e,t,n){var r=n(31)(n(213),n(220),null,null);e.exports=r.exports}});
+//# sourceMappingURL=2.js.map?006dd11b44a8ebe24b84
