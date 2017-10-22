@@ -42,7 +42,7 @@
     # 全局安装 vue-cli (vue脚手架：可初始化一个基本vue项目)
     $ npm install --global vue-cli
 	# 创建项目(vue-cli v2.8.2)
-    $ vue init webpack-simple
+    $ vue init webpack hello
     # 在当前目录创建一个基于 webpack 模板的项目(vue-cli v2.8.1)
     # $ vue init webpack-simple
     # 安装依赖，走你 (根据初始化的package.json安装)
@@ -55,7 +55,7 @@
 
 - [D01-github-commit](https://oldinaction.github.io/smweb/vuejs/D01-github-commit/)
     - 基于github提供的api，展示项目提交详情 (生命周期钩子、计算属性、观测、过滤器、ajax)
-- [D02-work-element](https://oldinaction.github.io/smweb/vuejs/D01-github-commit/dist/) [github](https://github.com/oldinaction/smweb/tree/master/vuejs/D02-work-element)
+- D02-work-element [github](https://github.com/oldinaction/smweb/tree/master/vuejs/D02-work-element)
 
     ![工作清单预览](D02-work-element/work-element.png)
 

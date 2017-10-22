@@ -1,0 +1,13 @@
+{
+    "status": 200,
+    "data": [
+        {
+            "id": 1,
+            "name": "smalle"
+        },
+        {
+            "id": 2,
+            "name": "hell0"
+        }
+    ]
+}
