@@ -1,0 +1,14 @@
+{
+  "name": "helloworld",
+  "version": "0.1.0",
+  "main": "index.html",
+  "scripts": {
+      "build": "node build"
+  },
+  "dependencies": {
+    "node-adodb": "^4.2.2"
+  },
+  "devDependencies": {
+    "nw-builder": "^3.5.4"
+  }
+}

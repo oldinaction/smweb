@@ -1,0 +1,17 @@
+- Docs：https://nwjs.io/、https://nwjs.org.cn/、https://wizardforcel.gitbooks.io/nwjs-doc/content/wiki/index.html
+- NW.js SDK才可debugger(下载sdk，设置环境变量)
+- nw-builder 打包
+    - 管理员Cmd执行`npm run build`(node运行此项目build.js)
+    - Enigma Virtual Box 再次打包
+- node-adodb 连接access
+    - https://github.com/nuintun/node-adodb
+    - `npm install node-adodb` 即可使用，无需通过nw-gpy重新构建
+    - 未找到提供程序。该程序可能未正确安装
+        - 需要按照access版本安装驱动。本案例基于win64操作系统，Access2016 32位，因此此时需要下载Access2016 32位驱动(https://www.microsoft.com/en-us/download/details.aspx?id=54920)。打包nw.js后，客户端也需要安装对于驱动
+        - Access 2000-2003 (*.mdb) Microsoft.Jet.OLEDB.4.0 (对于 Windows XP SP2 以上系统默认支持 Microsoft.Jet.OLEDB.4.0)
+        - Access > 2007 (*.accdb) 如Access2016对应配置为：Microsoft.ACE.OLEDB.16.0
+    - 文件名无效(-2147467259, Not a valid file name)
+        - `Data Source`中文件支持绝对路径、相对路径、局域网路径(不支持FTP/HTTP)，主要字符串编码和路径分隔符
+    - 不可识别的数据库格式(-2147467259)
+        - 使用`Microsoft.Jet.OLEDB.4.0`连接字符串，去连接Access2016的文件(.accdb)则报此错误，此时需要Access2016驱动
+        - 使用`Microsoft.ACE.OLEDB.16.0`可以同时解析`.accdb`和`.mdb`(对于 Windows XP SP2 以上系统默认支持 Microsoft.Jet.OLEDB.4.0，其它需要自己安装支持)
