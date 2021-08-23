@@ -27,7 +27,7 @@ module.exports = {
 		filename: "[name].bundle.js", // [name]代表entry的每一个键值. 如index.js会编译成index.bundle.js
 	},
 	// 插件项，需要new一个这个插件的实例
-    plugins: [
+  plugins: [
 		// 提取多个入口文件的公共脚本部分(如每个页面引入了jquery)，然后生成一个 common.js
 		new webpack.optimize.CommonsChunkPlugin('common.js'),
 		// 将 webpack中`entry`配置的相关入口thunk  和  `extract-text-webpack-plugin`抽取的css样式
