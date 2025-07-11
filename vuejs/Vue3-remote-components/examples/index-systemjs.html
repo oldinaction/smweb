@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基于system.js加载远程组件</title>
+
+    <!--使用 system.js方式来引入组件库-->
+    <script src='https://unpkg.com/systemjs@6.10.1/dist/system.js'></script>
+    <script src='https://unpkg.com/systemjs@6.10.1/dist/extras/amd.js'></script>
+    <script src='https://unpkg.com/systemjs@6.10.1/dist/extras/named-exports.js'></script>
+    <script src='https://unpkg.com/systemjs@6.10.1/dist/extras/use-default.js'></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/element-plus@2.9.1/dist/index.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <!-- system.js直接引入外部依赖. 存在问题: 此时不能引入global.js, 应该解决CND和ESM导入并存 -->
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "vue": "https://unpkg.com/vue@3.5.17/dist/vue.global.prod.js",
+          "element-plus": "https://unpkg.com/element-plus@2.9.1/dist/index.full.min.js"
+        }
+      }
+    </script>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
